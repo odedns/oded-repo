@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcron>
+	<jcron-entry>
+		<name></name>
+		<description></description>
+		<valid>
+			<valid-from></valid-from>
+			<valid-to></valid-to>
+		</valid>
+		<program-descriptor>
+			<type>
+			</type>
+			<path>
+			</path>
+			<args>
+				<arg>
+				</arg>
+				<arg>
+				</arg>
+			</args>
+		</program-descriptor>
+		<schedule-descriptor>
+			<schedule-dates>
+				<date>
+					dd-mm-yyyy:HH:MM:ss
+				</date>
+			</schedule-dates>
+			<repeat>
+				DAILY | WEEKLY | MONTHLY | YEARLY
+			</repeat>
+		</schedule-descriptor>
+	
+	</jcron-entry>
+</jcron>

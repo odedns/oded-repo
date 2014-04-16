@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="updateVer" name="test">
+
+ <target name="updateVer">
+    <propertyfile file="version.txt">
+      <entry key="minor.number" default="01" type="int" operation="+" value="1" pattern="00" />
+    </propertyfile>
+  </target>
+
+</project>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="db-ai" id="onjlib.db" metadata="uml2-1.0" initialized="true" tag="1000" key="3230303631303036206F6E6A6C69622F613733353532">
+  <children xsi:type="editmodel:ClassEditModel" name="DbQuery" location="364,2101" size="308,277" id="onjlib.db/DbQuery" runTimeClassModel="DbQuery(Ljava.sql.Connection;Ljava.lang.String;),setConnection(Ljava.sql.Connection;),addBatch(),setPreperaedStatement(Ljava.sql.PreparedStatement;),DbQuery(Ljava.lang.String;),getPreparedStatement(),setParam(ILjava.lang.Object;I),m_conn,close(),getConnection(),m_ps">
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_conn" id="onjlib.db/DbQuery#m_conn"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_ps" id="onjlib.db/DbQuery#m_ps"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="285,162">
+      <children xsi:type="editmodel:MethodEditModel" name="DbQuery" id="onjlib.db/DbQuery#DbQuery(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DbQuery" id="onjlib.db/DbQuery#DbQuery(Ljava.sql.Connection;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addBatch" id="onjlib.db/DbQuery#addBatch()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="onjlib.db/DbQuery#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConnection" id="onjlib.db/DbQuery#getConnection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPreparedStatement" id="onjlib.db/DbQuery#getPreparedStatement()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setConnection" id="onjlib.db/DbQuery#setConnection(Ljava.sql.Connection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setParam" id="onjlib.db/DbQuery#setParam(ILjava.lang.Object;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPreperaedStatement" id="onjlib.db/DbQuery#setPreperaedStatement(Ljava.sql.PreparedStatement;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="ResultSetHandler" location="340,3316" size="181,111" id="onjlib.db/ResultSetHandler" runTimeClassModel="handleRow(Ljava.sql.ResultSet;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="158,18">
+      <children xsi:type="editmodel:MethodEditModel" name="handleRow" id="onjlib.db/ResultSetHandler#handleRow(Ljava.sql.ResultSet;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Page" location="50,2101" size="264,763" id="onjlib.db/Page" runTimeClassModel="getDate(I),getLong(Ljava.lang.String;),getBytes(I),Page(),getRows(),initPage(Ljava.sql.ResultSet;),getColumnMap(),getDouble(I),init(),getString(Ljava.lang.String;),getObject(I),getInteger(Ljava.lang.String;),getBoolean(Ljava.lang.String;),getInt(Ljava.lang.String;),getFloat(Ljava.lang.String;),m_col,next(),getBigDecimal(Ljava.lang.String;),rewind(),getFloat(I),getDate(Ljava.lang.String;),getInt(I),getObject(Ljava.lang.String;),getTimestamp(Ljava.lang.String;),getShort(I),getLong(I),getBytes(Ljava.lang.String;),m_currIndex,getShort(Ljava.lang.String;),getInteger(I),Page(Ljava.sql.ResultSet;),getBoolean(I),getTimestamp(I),m_rows,getString(I),getDouble(Ljava.lang.String;),getBigDecimal(I),getCurrentRowIndex()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_col" id="onjlib.db/Page#m_col"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_currIndex" id="onjlib.db/Page#m_currIndex"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_rows" id="onjlib.db/Page#m_rows"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="241,630">
+      <children xsi:type="editmodel:MethodEditModel" name="Page" id="onjlib.db/Page#Page(Ljava.sql.ResultSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Page" id="onjlib.db/Page#Page()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBigDecimal" id="onjlib.db/Page#getBigDecimal(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBigDecimal" id="onjlib.db/Page#getBigDecimal(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBoolean" id="onjlib.db/Page#getBoolean(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBoolean" id="onjlib.db/Page#getBoolean(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBytes" id="onjlib.db/Page#getBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBytes" id="onjlib.db/Page#getBytes(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getColumnMap" id="onjlib.db/Page#getColumnMap()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCurrentRowIndex" id="onjlib.db/Page#getCurrentRowIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDate" id="onjlib.db/Page#getDate(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDate" id="onjlib.db/Page#getDate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDouble" id="onjlib.db/Page#getDouble(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDouble" id="onjlib.db/Page#getDouble(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFloat" id="onjlib.db/Page#getFloat(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFloat" id="onjlib.db/Page#getFloat(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInt" id="onjlib.db/Page#getInt(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInt" id="onjlib.db/Page#getInt(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInteger" id="onjlib.db/Page#getInteger(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInteger" id="onjlib.db/Page#getInteger(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLong" id="onjlib.db/Page#getLong(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLong" id="onjlib.db/Page#getLong(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getObject" id="onjlib.db/Page#getObject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getObject" id="onjlib.db/Page#getObject(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRows" id="onjlib.db/Page#getRows()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getShort" id="onjlib.db/Page#getShort(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getShort" id="onjlib.db/Page#getShort(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getString" id="onjlib.db/Page#getString(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getString" id="onjlib.db/Page#getString(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTimestamp" id="onjlib.db/Page#getTimestamp(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTimestamp" id="onjlib.db/Page#getTimestamp(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="onjlib.db/Page#init()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initPage" id="onjlib.db/Page#initPage(Ljava.sql.ResultSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="next" id="onjlib.db/Page#next()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rewind" id="onjlib.db/Page#rewind()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ConnectionManagerFactory" location="466,2914" size="297,151" id="onjlib.db/ConnectionManagerFactory" runTimeClassModel="m_props,m_connMng,getConnectionManager(),setConnectionManager(Lonjlib.db.ConnectionManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="179,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_connMng" id="onjlib.db/ConnectionManagerFactory#m_connMng"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_props" id="onjlib.db/ConnectionManagerFactory#m_props"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="274,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getConnectionManager" id="onjlib.db/ConnectionManagerFactory#getConnectionManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setConnectionManager" id="onjlib.db/ConnectionManagerFactory#setConnectionManager(Lonjlib.db.ConnectionManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="WASTranactionFactory" location="386,3133" size="272,133" id="onjlib.db/WASTranactionFactory" runTimeClassModel="foo(),tRX_MANAGER_FACTORY_51,getTransactionManager()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="205,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="tRX_MANAGER_FACTORY_51" id="onjlib.db/WASTranactionFactory#tRX_MANAGER_FACTORY_51"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="249,36">
+      <children xsi:type="editmodel:MethodEditModel" name="foo" id="onjlib.db/WASTranactionFactory#foo()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransactionManager" id="onjlib.db/WASTranactionFactory#getTransactionManager()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="IdGeneratorFactory" location="50,3133" size="286,133" id="onjlib.db/IdGeneratorFactory" runTimeClassModel="getIdGenerator(Ljava.lang.String;),getIdGenerator(),IdGeneratorFactory()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="263,54">
+      <children xsi:type="editmodel:MethodEditModel" name="IdGeneratorFactory" id="onjlib.db/IdGeneratorFactory#IdGeneratorFactory()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIdGenerator" id="onjlib.db/IdGeneratorFactory#getIdGenerator(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIdGenerator" id="onjlib.db/IdGeneratorFactory#getIdGenerator()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DbUtil" location="50,2914" size="366,169" id="onjlib.db/DbUtil" runTimeClassModel="closeQuitely(Ljava.sql.Connection;Ljava.sql.Statement;Ljava.sql.ResultSet;),closeConnection(Ljava.sql.Connection;),close(Ljava.sql.Connection;Ljava.sql.Statement;Ljava.sql.ResultSet;),getConnection(),DbUtil()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="343,90">
+      <children xsi:type="editmodel:MethodEditModel" name="DbUtil" id="onjlib.db/DbUtil#DbUtil()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="onjlib.db/DbUtil#close(Ljava.sql.Connection;Ljava.sql.Statement;Ljava.sql.ResultSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="closeConnection" id="onjlib.db/DbUtil#closeConnection(Ljava.sql.Connection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="closeQuitely" id="onjlib.db/DbUtil#closeQuitely(Ljava.sql.Connection;Ljava.sql.Statement;Ljava.sql.ResultSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConnection" id="onjlib.db/DbUtil#getConnection()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DbException" location="50,3316" size="240,115" id="onjlib.db/DbException" runTimeClassModel="DbException(Ljava.lang.String;),DbException(Ljava.lang.String;Ljava.lang.Exception;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="217,36">
+      <children xsi:type="editmodel:MethodEditModel" name="DbException" id="onjlib.db/DbException#DbException(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DbException" id="onjlib.db/DbException#DbException(Ljava.lang.String;Ljava.lang.Exception;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DbService" location="50,922" size="352,619" id="onjlib.db/DbService" runTimeClassModel="executeBatch(Lonjlib.db.DbQuery;),executeQuery(Lonjlib.db.DbQuery;Lonjlib.db.ResultSetHandler;),executeQueryEx(Ljava.lang.String;),executeUpdate(Ljava.lang.String;),m_autoCommit,close(),isAutoCommit(),executeQueryEx(Lonjlib.db.DbQuery;),beginTransaction(),executeQuery(Ljava.lang.String;),commit(),getTransactionManager(),setTrxClassName(Ljava.lang.String;),m_trx,DbService(),executeQuery(Lonjlib.db.DbQuery;),closeQuery(Lonjlib.db.DbQuery;),setAutoCommit(Z),createQuery(Ljava.lang.String;),m_trxClassName,executeQuerySingle(Ljava.lang.String;),executeQuerySingle(Lonjlib.db.DbQuery;),executeUpdate(Lonjlib.db.DbQuery;),DbService(Ljava.sql.Connection;),m_queryList,getTrxClassName(),rollback(),m_trxFlag,m_conn,closeQuitely()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="134,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_autoCommit" id="onjlib.db/DbService#m_autoCommit"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_conn" id="onjlib.db/DbService#m_conn"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_queryList" id="onjlib.db/DbService#m_queryList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_trx" id="onjlib.db/DbService#m_trx"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_trxClassName" id="onjlib.db/DbService#m_trxClassName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_trxFlag" id="onjlib.db/DbService#m_trxFlag"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="329,432">
+      <children xsi:type="editmodel:MethodEditModel" name="DbService" id="onjlib.db/DbService#DbService()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DbService" id="onjlib.db/DbService#DbService(Ljava.sql.Connection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="beginTransaction" id="onjlib.db/DbService#beginTransaction()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="onjlib.db/DbService#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="closeQuery" id="onjlib.db/DbService#closeQuery(Lonjlib.db.DbQuery;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="closeQuitely" id="onjlib.db/DbService#closeQuitely()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="commit" id="onjlib.db/DbService#commit()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createQuery" id="onjlib.db/DbService#createQuery(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeBatch" id="onjlib.db/DbService#executeBatch(Lonjlib.db.DbQuery;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQuery" id="onjlib.db/DbService#executeQuery(Lonjlib.db.DbQuery;Lonjlib.db.ResultSetHandler;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQuery" id="onjlib.db/DbService#executeQuery(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQuery" id="onjlib.db/DbService#executeQuery(Lonjlib.db.DbQuery;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQueryEx" id="onjlib.db/DbService#executeQueryEx(Lonjlib.db.DbQuery;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQueryEx" id="onjlib.db/DbService#executeQueryEx(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQuerySingle" id="onjlib.db/DbService#executeQuerySingle(Lonjlib.db.DbQuery;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeQuerySingle" id="onjlib.db/DbService#executeQuerySingle(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeUpdate" id="onjlib.db/DbService#executeUpdate(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="executeUpdate" id="onjlib.db/DbService#executeUpdate(Lonjlib.db.DbQuery;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransactionManager" id="onjlib.db/DbService#getTransactionManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTrxClassName" id="onjlib.db/DbService#getTrxClassName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isAutoCommit" id="onjlib.db/DbService#isAutoCommit()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rollback" id="onjlib.db/DbService#rollback()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAutoCommit" id="onjlib.db/DbService#setAutoCommit(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTrxClassName" id="onjlib.db/DbService#setTrxClassName(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DriverConnectionManager" location="590,215" size="211,187" id="onjlib.db/DriverConnectionManager" runTimeClassModel="DriverConnectionManager(),m_props,getProperties(),init(Ljava.util.Properties;),setProperties(Ljava.util.Properties;),getConnection()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="116,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_props" id="onjlib.db/DriverConnectionManager#m_props"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="188,90">
+      <children xsi:type="editmodel:MethodEditModel" name="DriverConnectionManager" id="onjlib.db/DriverConnectionManager#DriverConnectionManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConnection" id="onjlib.db/DriverConnectionManager#getConnection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getProperties" id="onjlib.db/DriverConnectionManager#getProperties()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="onjlib.db/DriverConnectionManager#init(Ljava.util.Properties;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setProperties" id="onjlib.db/DriverConnectionManager#setProperties(Ljava.util.Properties;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="onjlib.db/ConnectionManager&lt;-onjlib.db/DriverConnectionManager" source="//@children.9" target="//@children.10/@sourceConnections.0" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DataSourceConnectionManager" location="316,215" size="244,133" id="onjlib.db/DataSourceConnectionManager" runTimeClassModel="m_ds,init(Ljava.util.Properties;),getConnection()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_ds" id="onjlib.db/DataSourceConnectionManager#m_ds"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="159,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getConnection" id="onjlib.db/DataSourceConnectionManager#getConnection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="onjlib.db/DataSourceConnectionManager#init(Ljava.util.Properties;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.9/@sourceConnections.0" autoLocated="true" id="onjlib.db/ConnectionManager&lt;-onjlib.db/DataSourceConnectionManager" source="//@children.10" target="//@children.11" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="122,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,115" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.10/@sourceConnections.0" name="ConnectionManager" location="342,50" size="182,115" id="onjlib.db/ConnectionManager" runTimeClassModel="init(Ljava.util.Properties;),getConnection()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="159,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getConnection" id="onjlib.db/ConnectionManager#getConnection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="onjlib.db/ConnectionManager#init(Ljava.util.Properties;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.14/@sourceConnections.0" name="IdGenerator" location="256,452" size="118,111" id="onjlib.db/IdGenerator" runTimeClassModel="nextVal()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,18">
+      <children xsi:type="editmodel:MethodEditModel" name="nextVal" id="onjlib.db/IdGenerator#nextVal()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UuidGenerator" location="443,613" size="152,259" id="onjlib.db/UuidGenerator" runTimeClassModel="UuidGenerator(),uUID_LEN,m_filler,m_ip,main([Ljava.lang.String;),getIp(),nextVal(),sEP,m_clock,nextStringVal()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="84,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_clock" id="onjlib.db/UuidGenerator#m_clock"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_filler" id="onjlib.db/UuidGenerator#m_filler"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_ip" id="onjlib.db/UuidGenerator#m_ip"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sEP" id="onjlib.db/UuidGenerator#sEP"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="uUID_LEN" id="onjlib.db/UuidGenerator#uUID_LEN"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="129,90">
+      <children xsi:type="editmodel:MethodEditModel" name="UuidGenerator" id="onjlib.db/UuidGenerator#UuidGenerator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIp" id="onjlib.db/UuidGenerator#getIp()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="onjlib.db/UuidGenerator#main([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextStringVal" id="onjlib.db/UuidGenerator#nextStringVal()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextVal" id="onjlib.db/UuidGenerator#nextVal()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="onjlib.db/IdGenerator&lt;-onjlib.db/UuidGenerator" source="//@children.13" target="//@children.14/@sourceConnections.0" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TsIdGenerator" location="50,613" size="132,133" id="onjlib.db/TsIdGenerator" runTimeClassModel="TsIdGenerator(),nextVal(),rnd">
+    <children xsi:type="editmodel:CompartmentEditModel" size="80,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="rnd" id="onjlib.db/TsIdGenerator#rnd"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="99,36">
+      <children xsi:type="editmodel:MethodEditModel" name="TsIdGenerator" id="onjlib.db/TsIdGenerator#TsIdGenerator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextVal" id="onjlib.db/TsIdGenerator#nextVal()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.15/@sourceConnections.0 //@children.13/@sourceConnections.0" autoLocated="true" id="onjlib.db/IdGenerator&lt;-onjlib.db/TsIdGenerator" source="//@children.14" target="//@children.12" targetEnd="//@children.14/@sourceConnections.0/@children.1" sourceEnd="//@children.14/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="59,111" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TableIdGenerator" location="212,613" size="201,223" id="onjlib.db/TableIdGenerator" runTimeClassModel="m_currNumerator,nextVal(),dEF_NUMERATOR,nextVal(I),m_tableName,m_chunkSize,TableIdGenerator(),m_counter">
+    <children xsi:type="editmodel:CompartmentEditModel" size="129,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="dEF_NUMERATOR" id="onjlib.db/TableIdGenerator#dEF_NUMERATOR"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_chunkSize" id="onjlib.db/TableIdGenerator#m_chunkSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_counter" id="onjlib.db/TableIdGenerator#m_counter"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_currNumerator" id="onjlib.db/TableIdGenerator#m_currNumerator"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="m_tableName" id="onjlib.db/TableIdGenerator#m_tableName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,54">
+      <children xsi:type="editmodel:MethodEditModel" name="TableIdGenerator" id="onjlib.db/TableIdGenerator#TableIdGenerator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextVal" id="onjlib.db/TableIdGenerator#nextVal()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextVal" id="onjlib.db/TableIdGenerator#nextVal(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="onjlib.db/IdGenerator&lt;-onjlib.db/TableIdGenerator" source="//@children.15" target="//@children.14/@sourceConnections.0" targetEnd="//@children.15/@sourceConnections.0/@children.1" sourceEnd="//@children.15/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="LocalTrxManager" location="50,1846" size="154,151" id="onjlib.db/LocalTrxManager" runTimeClassModel="beginTransaction(),LocalTrxManager(),rollback(),commit()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="114,72">
+      <children xsi:type="editmodel:MethodEditModel" name="LocalTrxManager" id="onjlib.db/LocalTrxManager#LocalTrxManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="beginTransaction" id="onjlib.db/LocalTrxManager#beginTransaction()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="commit" id="onjlib.db/LocalTrxManager#commit()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rollback" id="onjlib.db/LocalTrxManager#rollback()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.17/@sourceConnections.0" autoLocated="true" id="onjlib.db/TrxManager&lt;-onjlib.db/LocalTrxManager" source="//@children.16" target="//@children.18" targetEnd="//@children.16/@sourceConnections.0/@children.1" sourceEnd="//@children.16/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,205" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="WASTrxManager" location="234,1846" size="272,205" id="onjlib.db/WASTrxManager" runTimeClassModel="beginTransaction(),rollback(),tRX_MANAGER_FACTORY_51,WASTrxManager(),m_manager,commit(),getTransactionManager()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="205,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_manager" id="onjlib.db/WASTrxManager#m_manager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tRX_MANAGER_FACTORY_51" id="onjlib.db/WASTrxManager#tRX_MANAGER_FACTORY_51"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="249,90">
+      <children xsi:type="editmodel:MethodEditModel" name="WASTrxManager" id="onjlib.db/WASTrxManager#WASTrxManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="beginTransaction" id="onjlib.db/WASTrxManager#beginTransaction()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="commit" id="onjlib.db/WASTrxManager#commit()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransactionManager" id="onjlib.db/WASTrxManager#getTransactionManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rollback" id="onjlib.db/WASTrxManager#rollback()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="onjlib.db/TrxManager&lt;-onjlib.db/WASTrxManager" source="//@children.17" target="//@children.16/@sourceConnections.0" targetEnd="//@children.17/@sourceConnections.0/@children.1" sourceEnd="//@children.17/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="136,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.0" name="TrxManager" location="140,1591" size="217,205" id="onjlib.db/TrxManager" runTimeClassModel="setConnection(Ljava.sql.Connection;),beginTransaction(),rollback(),m_conn,getConnection(),commit(),TrxManager()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="m_conn" id="onjlib.db/TrxManager#m_conn"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="194,108">
+      <children xsi:type="editmodel:MethodEditModel" name="TrxManager" id="onjlib.db/TrxManager#TrxManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="beginTransaction" id="onjlib.db/TrxManager#beginTransaction()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="commit" id="onjlib.db/TrxManager#commit()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConnection" id="onjlib.db/TrxManager#getConnection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rollback" id="onjlib.db/TrxManager#rollback()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setConnection" id="onjlib.db/TrxManager#setConnection(Ljava.sql.Connection;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=3"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler>
+      <guides position="140"/>
+    </leftRuler>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterlas="true"/>
+</editmodel:ClassDiagramEditModel>
