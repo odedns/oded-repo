@@ -1,0 +1,2 @@
+serviceClass: com.mts.nrtrde.client.NRTRDEService
+path: 92D3AA6D35B299D6072C180D0FD9AA01.gwt.rpc
