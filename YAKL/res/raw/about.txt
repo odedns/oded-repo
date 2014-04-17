@@ -1,0 +1,6 @@
+YAKL copyright(c) Oded Nissan 2011.
+YAKL stands for Yet Another Kid Locator. 
+This application is used to locate your kids. You can send an SMS message to your child's phone and receive his location in a reply SMS. 
+The SMS you send should contain a keyword that will be identified by the application to trigger the location. The SMS keyword can be set using the settings tab of the application. 
+The YAKL application will try to get a fix on the receiving phone's location using either the GPS provider or the NETWORK provider and send back an SMS containing the coordinates of the phone's location and a Google Maps URL for the location. 
+You can also configure the the phone to ring for a specified duration when receiving the location SMS message.

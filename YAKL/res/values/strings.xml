@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Mainactivity!</string>
+    <string name="app_name">YAKL</string>
+    <string name="ok">OK</string>
+    <string name="testLocation">Test Location</string>
+    <string name="start">StartActivity</string>
+    <string name="keyword">SMS Keyword</string>
+     <string name="keywordSummary">Keyword that will trigger the location message</string>
+    <string name="startListener">Start Listener</string>
+    <string name="startListenerSummary">Start or stop the message listener</string>
+    <string name="ringPhone">Ring Phone</string>
+    <string name="ringPhoneSummary">Ring the phone when message is received</string>
+    
+    <string name="ringTime">Choose ring Time</string>
+    <string name="ringTimeSummary">Time to ring the phone when receiving the message. Can be used to locate the phone.</string>
+    <string-array name="ringTimeList">
+        <item>10 Seconds</item>
+        <item>20 Seconds</item>
+        <item>30 Seconds</item>
+        <item>60 Seconds</item>
+        <item>120 Seconds</item>
+    </string-array>
+    
+     <string-array name="ringTimeListValues">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </string-array>
+        
+    <string name="ringTone">Choose Ring Tone</string>
+    <string name="ringToneSummary">Ring Tone to use when ringin the phone on a location message.</string>
+</resources>

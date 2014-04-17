@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tabhost"></item>
+    <item type="id" name="tabcontent"></item>
+    <item type="id" name="tabs"></item>
+</resources>

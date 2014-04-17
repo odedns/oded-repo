@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/startListener" android:key="startListener" android:summary="@string/keywordSummary"></CheckBoxPreference>
+    <EditTextPreference android:summary="@string/keywordSummary" android:title="@string/keyword" android:key="keyword"></EditTextPreference>
+    <CheckBoxPreference android:key="ringPhone" android:title="@string/ringPhone" android:summary="@string/ringPhoneSummary"/>
+    <ListPreference android:selectable="true" android:key="ringTime" android:enabled="true" android:title="@string/ringTime" android:summary="@string/ringTimeSummary" android:entryValues="@array/ringTimeListValues" android:entries="@array/ringTimeList"/>
+    <RingtonePreference android:key="ringtone" android:title="@string/ringTone" android:summary="@string/ringToneSummary"/>
+</PreferenceScreen>
