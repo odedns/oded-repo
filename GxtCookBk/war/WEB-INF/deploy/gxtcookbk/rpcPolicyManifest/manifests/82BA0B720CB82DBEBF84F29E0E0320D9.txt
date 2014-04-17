@@ -1,0 +1,2 @@
+serviceClass: com.gxtcookbook.code.client.comet.CometGateway
+path: 29F4B5F83095ABD1E8A54E92095A915C.gwt.rpc

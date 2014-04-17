@@ -1,0 +1,2 @@
+serviceClass: com.gxtcookbook.code.client.FileService
+path: FB1F97A64655CCE9416EAB44601C905A.gwt.rpc

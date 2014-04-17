@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+   
+  <servlet>
+    <servlet-name>remotegateway</servlet-name>
+    <servlet-class>com.gxtcookbook.code.server.RemoteGatewayImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>remotegateway</servlet-name>
+    <url-pattern>/gxtcookbk/remotegateway</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>fileservice</servlet-name>
+    <servlet-class>com.gxtcookbook.code.server.FileServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>fileservice</servlet-name>
+    <url-pattern>/gxtcookbk/fileservice</url-pattern>
+  </servlet-mapping>
+
+	<servlet>
+		<servlet-name>EventService</servlet-name>
+		<servlet-class>de.novanic.eventservice.service.EventServiceImpl</servlet-class>
+	</servlet>
+	
+	
+	<servlet>
+		<servlet-name>CometGateway</servlet-name>
+		<servlet-class>com.gxtcookbook.code.server.comet.CometGatewayImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>com.gxtcookbook.code.server.FileUploadServlet</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>EventService</servlet-name>
+		<url-pattern>/gxtcookbk/gwteventservice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CometGateway</servlet-name>
+		<url-pattern>/gxtcookbk/remote/evtgateway</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>gxtcookbk/uploadgateway</url-pattern>
+	</servlet-mapping>
+
+
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>GxtCookBk.html</welcome-file>
+  </welcome-file-list>
+
+
+</web-app>

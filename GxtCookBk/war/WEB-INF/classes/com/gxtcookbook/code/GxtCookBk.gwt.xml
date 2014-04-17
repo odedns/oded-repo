@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gxtcookbk'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.google.gwt.core.Core"/>
+  <inherits name="com.extjs.gxt.ui.GXT"/>
+  <inherits name='com.extjs.gxt.themes.Themes' />
+ 
+  <!-- We used these in the Charts chapter -->
+  <inherits name="com.google.gwt.http.HTTP" />
+  <inherits name="com.google.gwt.json.JSON" />
+  <inherits name="com.extjs.gxt.charts.Chart"/>
+  
+  <!--  Used in chapter 10 for the desktop DnD recipe -->
+  <inherits name="org.vectomatic.libgwtfile" />
+  
+   <!-- Used in chapter 11 for persistence -->
+  <inherits name="net.sf.gilead.Gilead4Gwt" />
+  
+  <!-- Used in chapter 11 for Comet -->
+  <inherits name='de.novanic.eventservice.GWTEventService' />
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.gxtcookbook.code.client.GxtCookBk'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='server/model'/>
+  <source path='server/comet/event'/>
+  
+  
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.ChangeListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.ClickListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.FocusListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.FormHandlerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.KeyboardListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.LoadListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.MouseListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.MouseWheelListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.PopupListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.ScrollListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.TabListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.TableListenerCollection"/>
+ <extend-configuration-property name="rpc.blacklist" value="com.google.gwt.user.client.ui.TreeListenerCollection"/>
+
+</module>

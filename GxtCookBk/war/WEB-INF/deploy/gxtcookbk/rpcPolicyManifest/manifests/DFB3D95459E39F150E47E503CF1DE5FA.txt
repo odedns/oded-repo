@@ -1,0 +1,2 @@
+serviceClass: com.gxtcookbook.code.client.RemoteGateway
+path: DC6C5AC943C8F4F2AE32AD60177D80E5.gwt.rpc
