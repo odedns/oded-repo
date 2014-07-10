@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+<head>
+
+   <meta charset="utf-8">
+         <title>Getting started with Bootstrap</title>
+         <link rel="stylesheet" href="assets/css/bootstrap.css">
+         
+          <style>
+          	 .fill {          	 	
+          	 	min-height: 100%;          	 	
+          	 }
+             header { background: gray }
+             .content {
+             background: cyan; 
+             	height: 500px;
+             	
+             }
+             .sidebar {
+             background: cyan;
+             	height: 500px; 
+             }
+            footer { background: cyan; }
+        </style>
+</head>
+<body>
+
+<div class="container-fluid">
+<div  class="row-fluid">
+	<div class="span3">
+   		<ul class="nav nav-pills nav-stacked">
+  				<li onclick="$(this).addClass('active');" >
+    				<a href="#">Home</a>
+  				</li>
+  				<li onclick="$(this).addClass('active');" ><a href="#">Link</a></li>
+  				<li onclick="$(this).addClass('active');" ><a href="#">Link</a></li>
+			</ul>
+ </div>
+ <div class="span9 content">
+ 	content
+ </div>
+</div>
+
+
+	
+
+</div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>    
+</body>
+</html>

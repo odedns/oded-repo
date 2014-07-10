@@ -1,0 +1,21 @@
+https:   //  oauthasservices-skywalker.hana.ondemand.com/oauth2/api/v1/authorize?client_id=6a38a937-0cd0-33d0-a7b1-0bf0c9439a71&response_type=code&redirect_uri=https://blogs-qa.sap.com/api/oauth/dummy-callback&scope=post_activities
+
+client id = 6a38a937-0cd0-33d0-a7b1-0bf0c9439a71
+
+callback code = 
+95e67b6b-7576-342a-92e8-da3003090762
+
+
+
+https://oauthasservices-skywalker.hana.ondemand.com/oauth2/api/v1/token?client_id=6a38a937-0cd0-33d0-a7b1-0bf0c9439a71&grant_type=authorization_code&redirect_uri=https://blogs-qa.sap.com/api/oauth/dummy-callback&code=95e67b6b-7576-342a-92e8-da3003090762
+
+
+{
+access_token: "44ada9f7d8143b4a85caea1529f6f98"
+token_type: "Bearer"
+expires_in: 0
+refresh_token: "9aa9f62a7b2156e44a6e1288c659f99"
+scopes: [1]
+0:  "post_activities"
+-
+}
