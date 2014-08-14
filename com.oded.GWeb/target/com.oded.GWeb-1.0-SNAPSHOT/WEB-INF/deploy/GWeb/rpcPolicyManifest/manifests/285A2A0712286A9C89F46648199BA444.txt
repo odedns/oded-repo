@@ -1,0 +1,2 @@
+serviceClass: com.oded.client.GreetingService
+path: 92A37A549DB5589733F5258856B25212.gwt.rpc
