@@ -1,0 +1,81 @@
+<HTML>
+
+<HEAD>
+
+style>
+<!--
+a:hover{color:red}
+a{text-decoration:none}
+.look{font:bold 16pt Garamond,Arial;}
+.look2{font:bold 12pt Garamond,Arial;}
+.folding{cursor:hand}
+a:hover{color:red}
+//-->
+</style>
+
+<script language="JavaScript">
+<!--
+//By George Chiang (www.javascriptkit.com) JavaScript site.
+img1=new Image()
+img1.src="fold.gif"
+img2=new Image()
+img2.src="open.gif"
+ns6_index=0
+
+function change(e){
+
+if(!document.all&&!document.getElementById)
+return
+
+if (!document.all&&document.getElementById)
+ns6_index=1
+
+var source=document.getElementById&&!document.all? e.target:event.srcElement
+if (source.className=="folding"){
+var source2=document.getElementById&&!document.all? source.parentNode.childNodes:source.parentElement.all
+if (source2[2+ns6_index].style.display=="none"){
+source2[0].src="open.gif"
+source2[2+ns6_index].style.display=''
+}
+else{
+source2[0].src="fold.gif"
+source2[2+ns6_index].style.display="none"
+}
+}
+}
+document.onclick=change
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<div class="look"><img src="fold.gif" class="folding"><a href="dfddf">Menu 1</a>
+<ul class="look2" style="list-style-image:url(list.gif);display:none">
+    <li><a href="fdddf">Link 1a</a></li>
+    <li><a href="fdddf">Link 1b</a></li>
+    <li><a href="fdddf">Link 1c</a></li>
+</ul>
+</div><br>
+
+<div class="look"><img src="fold.gif" class="folding"><a href="dfddf">Menu 2</a>
+<ul class="look2" style="list-style-image:url(list.gif);display:none">
+    <li><a href="fdddf">Link 2a</a></li>
+    <li><a href="fdddf">Link 2b</a></li>
+    <li><a href="fdddf">Link 2c</a></li>
+</ul>
+</div><br>
+
+<div class="look"><img src="fold.gif" class="folding"><a href="dfddf">Menu 3</a>
+<ul class="look2" style="list-style-image:url(list.gif);display:none">
+    <li><a href="fdddf">Link 3a</a></li>
+    <li><a href="fdddf">Link 3b</a></li>
+    <li><a href="fdddf">Link 3c</a></li>
+</ul>
+</div>
+
+
+
+</BODY>
+</HTML>

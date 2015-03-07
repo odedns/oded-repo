@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui">
+     
+   
+  
+  
+    <ui:style>        
+    	html,body {
+			border-width: 1px;	
+		}
+        .eastPanel {
+            background-color: #98F5FF;
+            
+        }
+        .westPanel {
+            background-color: #E0EEEE;
+        }
+        .northPanel {
+            background-color: #DCDCDC;
+            
+        }
+        .southPanel {
+            background-color: #DCDCDC;
+        }
+        .centerPanel {
+            background-color: #F0FFFF;
+        }       
+        
+      
+    </ui:style>
+     <g:DockLayoutPanel unit='PCT'  height="100%"  width="100%" >
+       <g:north size='10'>
+         <g:FlowPanel styleName="{style.northPanel}">
+           <g:Label>This is the header panel</g:Label>
+         </g:FlowPanel>
+       </g:north>
+       <g:west size='25'>
+       <g:FlowPanel styleName="{style.westPanel}" ui:field="westPanel">
+         <g:VerticalPanel >
+           <g:Label>This is the NAV panel</g:Label>
+           <g:Button ui:field="but1">Button 1</g:Button>
+           <g:Button ui:field="but2">Button 2</g:Button>
+           <g:Button ui:field="but3">Button 3</g:Button>
+            </g:VerticalPanel>
+        </g:FlowPanel>
+       </g:west>
+       <g:center>
+         <g:SimplePanel styleName="{style.centerPanel}" ui:field="centerPanel">
+           <g:Label>This is the CENTER panel</g:Label>
+         </g:SimplePanel>
+       </g:center>
+            
+        <g:south size="10">
+         <g:FlowPanel styleName="{style.southPanel}">
+           <g:Label>This is the FOOTER panel</g:Label>
+         </g:FlowPanel>
+        </g:south>       
+     </g:DockLayoutPanel>
+</ui:UiBinder> 

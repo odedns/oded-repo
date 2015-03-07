@@ -1,0 +1,7 @@
+<root>
+<isd:service xmlns:isd="http://xml.apache.org/xml-soap/deployment" id="http://tempuri.org/webservices.WSBean" checkMustUnderstands="false">
+  <isd:provider type="java" scope="Application" methods="getData setData">
+    <isd:java class="webservices.WSBean" static="false"/>
+  </isd:provider>
+</isd:service>
+</root>

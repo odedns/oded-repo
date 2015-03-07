@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+table.bingo
+{ text-align: center;
+font-family: Verdana;
+font-weight: bold;
+font-size: 14px;
+color: #404040;
+width: 500px;
+background-color: #fafafa;
+border:thick; 
+border-collapse: collapse;
+border-spacing: 0px; }
+
+-->
+</style>
+<title>Insert title here</title>
+<script type="text/javascript">
+ function generate()
+ {
+ 	var rand_var;
+ 	for(k=0; k < 36; ++k) {
+ 		document.write("<br><br><br>");
+ 		document.write("<table width=50% border=2>");
+ 		for(i=0; i < 5; ++i) {
+ 			document.write("<tr>");
+ 			for(j=0; j <5; ++j) {
+ 				rand_var = Math.ceil(100*Math.random());
+ 				document.write("<td>" + rand_var + "</td>");
+ 			}
+ 			document.write("</tr>");
+ 		}
+ 		document.write("</table>");
+ 	}
+ }
+
+</script>
+</head>
+
+<body onload="generate()">
+
+
+<h1> bingo </h1>
+
+
+</body>
+<table class="bingo" >
+<tr><td>cell1</td> <td>cell1</td><td>cell1</td><td>cell1</td><td>cell1</td></tr>
+<tr><td>cell1</td> <td>cell1</td><td>cell1</td><td>cell1</td><td>cell1</td></tr>
+<tr><td>cell1</td> <td>cell1</td><td>cell1</td><td>cell1</td><td>cell1</td></tr>
+<tr><td>cell1</td> <td>cell1</td><td>cell1</td><td>cell1</td><td>cell1</td></tr>
+<tr><td>cell1</td> <td>cell1</td><td>cell1</td><td>cell1</td><td>cell1</td></tr>
+
+
+</table>
+</html>

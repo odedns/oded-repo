@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: I070659
+Build-Jdk: 1.8.0_05
+Class-Path: jetty-webapp-9.2.0.RC0.jar jetty-xml-9.2.0.RC0.jar jetty-u
+ til-9.2.0.RC0.jar jetty-servlet-9.2.0.RC0.jar jetty-security-9.2.0.RC
+ 0.jar jetty-server-9.2.0.RC0.jar javax.servlet-api-3.1.0.jar jetty-ht
+ tp-9.2.0.RC0.jar jetty-io-9.2.0.RC0.jar
+Main-Class: test.Application
+Created-By: Maven Integration for Eclipse
+

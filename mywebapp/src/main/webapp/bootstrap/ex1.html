@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+<head>
+
+   <meta charset="utf-8">
+         <title>Getting started with Bootstrap</title>
+         <link rel="stylesheet" href="assets/css/bootstrap.css">
+         <link rel="stylesheet" href="assets/css/bootstrap-responsive.css">
+         <!-- 
+                   <link rel="stylesheet" href="docs.css">
+                  -->
+           <style>
+           html, body { 
+    			height: 100%; 
+			}
+           
+             header { background: gray }
+            .my-content { 
+               background: cyan;
+               height: 100%;
+               
+               }
+               .fill { 
+ 				   min-height: 100%;
+    				position: relative;
+				}
+				.filler:after{
+ 				   background-color: inherit;
+    				bottom: 0;
+    				content: "";
+    				right: 0;
+    				position: absolute;
+    				top: 0;
+    				width: inherit;
+    				z-index: -1;  
+			}
+            .my-sidebar { 
+             	background: cyan; 
+             	height: 100%;
+             	
+             }
+            footer { background: cyan; }
+        </style>
+         
+        
+</head>
+<body>
+ <div class="container-fluid fill">
+	<div class="row-fluid">  
+		<div class="span2 my-sidebar" ><br>  
+			sidebar inline elements like span, block level elements like p, div.<br>  
+		</div>		
+		<div class="span10 my-content"><br>  
+			content inline elements like span, block level elements like p, div.<br>  
+		</div> 
+	</div>
+	
+	<div class="container-fluid fill">
+    	<div class="row-fluid">
+        	<div class="span3">
+	            content sidebar
+    	    </div>
+        	<div class="span9 hero-unit filler">
+            	content
+        	</div>
+    	</div>
+	</div>
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>    
+</body>
+</html>

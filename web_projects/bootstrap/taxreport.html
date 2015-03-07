@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script lang="text/javascript">
+    
+    	function callServer(action,popCode,insured,policy)
+    	{
+    		var url = "test.json";
+    		if(action == "genBatch") {
+    			url += "?action="+ action+ "&popCode=" + popCode;    			
+    		}t
+    		if(action == "genInsured") {
+    			url += "?action=" + action+ "&popCode=" + popCode + "&insured="+ insured;    			
+    		}
+    		if(action == "genPolicy") {
+    			url += "?action="+ action + "&popCode=" + popCode + "&insured="+ insured +"&policy=" + policy;    			
+    		}
+    		console.log("calling url=" +url);
+    		$.ajax({url:url,datatype: "json"}).done( function(data) {
+	   			console.log("success data = " + data);
+	   			console.log("retCode= " + data.retCode + " pdfUrl =" + data.pdfUrl);
+	   			$("#output").html("<h4> Success </h4><p>pdfUrl: <a href=" + data.pdfUrl + ">" + data.pdfUrl + "</a></p>");
+				}).fail(function(textStatus,errorThrown){
+				console.log("failed.. error=" + errorThrown);
+			});
+    		
+  		}
+    	
+    	$(document).ready(function() {
+//    		$("#mytabs a").tab('show');
+			$("#batchButton").on('click',function(event) {
+				event.preventDefault();
+				var popCode = $("#popCodeBatch").val();
+	    		console.log("on batch click popCode=" +popCode);
+	    		callServer("genInsured", popCode, null,null);	    			
+	    		console.log("after ajax.");
+	    		
+	    		
+			});
+			
+			$("#batchClear").on('click',function(event) {
+				$("#output").html("");				
+        
+			});
+			
+			$("#insuredButton").on('click',function(event) {
+				event.preventDefault();
+				var popCode = $("#popCodeInsured").val();
+				var insured = $("#insuredSeq").val();
+	    		console.log("on insured click popCode=" +popCode + " insured= " + insured);
+	    		callServer("genInsured", popCode, insured,null);
+			});
+			$("#policyButton").on('click',function(event) {
+				event.preventDefault();
+				var popCode = $("#popCodePolicy").val();
+				var insured = $("#insuredSeqPolicy").val();
+				var policy = $("#policyNum").val();
+	    		console.log("on insured click popCode=" +popCode + " insured= " + insured + " policy=" + policy);
+	    		callServer("genInsured", popCode, insured,policy);
+			});
+			
+    	}
+    	);
+    	
+    	
+    </script>
+  </head>
+
+  <body>
+
+  
+    <div class="container" >
+
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#generateId">Generate for Id</a></li>
+  <li><a data-toggle="tab" href="#generatePolicy">Generate for Policy</a></li>
+  <li><a data-toggle="tab" href="#batch">Batch Activation</a></li>
+</ul>
+<div class="tab-content">
+
+	<div id="generateId" class="tab-pane fade active">
+			<div class="panel panel-default">
+  				<div class="panel-body">
+    			
+  				<form role="form" class="form-horizontal">
+  					<div class="form-group">
+    					<label for="popCodeInsured" class="col-sm-2 control-label">Population Code:</label>
+						<input type="number" id="popCodeInsured" placeholder="number">   			
+					</div>
+					<div class="form-group">
+							<label for="insuredSeq" class="col-sm-2 control-label">Insured Sequence:</label>
+    							<input type="number" id="insuredSeq" placeholder="number">
+    					</div>
+    					<div class="form-group">
+    						 <div class="col-sm-offset-2">
+      							<button id="insuredButton" type="submit" class="btn btn-default">Submit</button>
+      							<button id="insuredClear" type="reset" class="btn btn-default" >Clear</button>
+      							
+    						</div>
+  		  	
+				  		  </div>
+    			
+   				</form>
+   				</div>
+		</div>
+  	</div>
+<div id="generatePolicy" class="tab-pane fade">
+			<div class="panel panel-default">
+  			<div class="panel-body">
+    			
+		<form role="form" class="form-horizontal">
+		<div class="form-group">
+    			<label for="popCodePolicy" class="col-sm-2 control-label">Population Code:</label>
+				<input type="number" id="popCodePolicy" placeholder="number">   			
+			</div>
+			<div class="form-group">
+    			<label for="insuredSeqPolicy" class="col-sm-2 control-label">Insured Sequence:</label>
+				<input type="number" id="insuredSeqPolicy" placeholder="number">   			
+			</div>
+			<div class="form-group">
+    			<label for="policyNum" class="col-sm-2 control-label">Policy Sequence:</label>
+				<input type="number" id="policyNum" placeholder="number">   			
+			</div>
+    
+    		<div class="form-group">
+    		 <div class="col-sm-offset-2">
+      			<button id="policyButton" type="submit" class="btn btn-default">Submit</button>
+      			<button id="policyClear" type="reset" class="btn btn-default" >Clear</button>
+      			
+    		</div>
+  		  	
+  		  </div>
+   			
+   		</form>
+   		</div>
+   		</div>
+  </div>
+		
+
+  	
+<div id="batch" class="tab-pane fade">
+			<div class="panel panel-default">
+  			<div class="panel-body">
+    			
+		<form role="form" class="form-horizontal">
+		<div class="form-group">
+    			<label for="popCodeBatch" class="col-sm-2 control-label">Population Code:</label>
+				<input type="number" id="popCodeBatch" placeholder="number">   			
+			</div>
+    
+    		<div class="form-group">
+    		 <div class="col-sm-offset-2">
+      			<button id="batchButton" type="submit" class="btn btn-default" >Submit</button>
+      			<button id="batchClear" type="reset" class="btn btn-default" >Clear</button>
+      			
+    		</div>
+  		  	
+  		  </div>
+   			
+   		</form>
+   		</div>
+   		</div>
+  </div>
+		
+
+	</div>
+  	<div id="output" class="panel panel-default" >
+	
+  </div>	
+
+    </div><!-- /.container -->
+
+
+  </body>
+</html>

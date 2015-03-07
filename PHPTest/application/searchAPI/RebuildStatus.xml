@@ -1,0 +1,8 @@
+<task>
+   <name>aaa</name>
+   <currentStatus>Idle</currentStatus>
+   <elapsed>1:10</elapsed>
+   <remaining>0:50</remaining>
+   <percentComplete>70%</percentComplete>
+   <jvmUsagePercentage>1500</jvmUsagePercentage>
+</task>

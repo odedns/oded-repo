@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="gwtbootstrap3-sample-app:war exploded">
+    <output-path>$PROJECT_DIR$/target/SampleWebApp-1.0</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="gwtbootstrap3-sample-app/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gwtbootstrap3-sample-app" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="gwtbootstrap3-sample-app/gwt/GWT" />
+    </root>
+  </artifact>
+</component>

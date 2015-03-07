@@ -1,0 +1,15 @@
+body { 
+  font: 62.5% Arial, Verdana, sans-serif; 
+} 
+
+p {
+  width: 200px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.controls {
+  margin-top: 1em;
+}

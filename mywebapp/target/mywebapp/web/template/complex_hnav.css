@@ -1,0 +1,103 @@
+@charset "iso-8859-1";
+
+/*******************************************************************************
+*  complex_hnav.css : 2005-08-31 : Ruthsarian Layouts
+* ------------------------------------------------------------------------------
+*  NOTE: This is just a copy of the hnav.css stylesheet found as part of the
+*	 skidoo layout found at:
+*	 http://webhost.bridgew.edu/etribou/layouts/skidoo/
+*
+*	 Only one minor modification is made to that stylesheet to fit with
+*	 the HTML structure of the 2col.v5 layout.
+* ------------------------------------------------------------------------------
+*  responsible for the horizontal navigation elements, one of which is usually
+*  placed below the masthead but on top of the columns.
+*
+*  this seems awfully complex for something seemingly so simple, no? the big
+*  issue here is we need to make the menu items inline elements. we could make
+*  them block elements and float them left or right, but that creates a lot of
+*  problems with compatibility and how elements are ordered on-screen versus
+*  source. just trust me on this, inline is the way to go here.
+*
+*  the main reason people would float these elements rather than go inline is
+*  because padding and margin values have an effect on surrounding elements.
+*  meaning if an element is 20 pixels tall, and has 5 pixels of padding on
+*  top and bottom, a browser is going to treat that element as 30 pixels tall 
+*  when rendering the page. but for an inline element (versus a block element)
+*  the browser treats it as 20 pixels tall. That padding will still be applied
+*  and if you've got a background color on this element, you'll see that color
+*  extend 5 pixels into the elements immediately above and below this inline
+*  element with padding. 
+*
+*  in short: vertical padding on inline elements can make things look really
+*            bad. 
+
+*  so we need to work around it. thus all of the hacks you see in this 
+*  stylesheet.
+*******************************************************************************/
+
+.hnav
+{
+	border-bottom: solid 1px #fff;
+	text-align: center;
+}
+.hnav, .hnav ul li a
+{
+	/* need to middor veritcal padding on .hnav and child anchor elements
+	 * because the anchors are _not_ block elements. since they are not
+	 * block elements web browsers will not expand .hnav to contain them
+	 * even with the extra padding. by applying the same padding to both
+	 * the parent .hnav _looks_ like its containing the child anchor
+	 * elements. 
+	 */
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+.hnav ul, .hnav ul li
+{
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.hnav ul li a
+{
+	margin: 0 -1px 0 0;
+	padding-left: 10px;
+	padding-right: 10px;	/* short-hand padding attribute would overwrite
+				   top/bottom padding set in a previous rule */
+	border-left: solid 1px #000;
+	border-right: solid 1px #000;
+	white-space: nowrap;
+}
+.hnav ul li a:link, .hnav ul li a:visited, .hnav ul li a:active, .hnav ul li a:hover
+{
+	text-decoration: none;
+}
+.hnav ul li span
+{
+	display: none;
+}
+* html .hnav ul li, * html .hnav ul li a
+{
+	width: 1%; /* IE/Mac needs this */
+	display: inline-block;	/* IE/Mac needs this */
+	/* \*/
+		width: auto;
+		display: inline; 
+	/* reset above hack */
+}
+* html .hnav, * html .hnav ul a
+{
+	/* \*/ height: 0.01%; /* hasLayout hack to fix render bugs in IE/Win. 
+				 IE/Mac will ignore this rule. */
+}
+* html .HNAV
+{
+	padding: 0;	/* IE5/Win will resize #hnav to fit the heights of its
+			   inline children that have vertical padding. So this
+			   incorrect case selector hack will be applied only by
+			   IE 5.x/Win */
+}
+
+/******************************************************************************/

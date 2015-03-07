@@ -1,0 +1,35 @@
+div#oldbrowser
+{
+	display: none;	/* hide the standards compliant warning - this isn't a catch all, but works for old browsers */
+}
+a img
+{
+	border-width: 0;	/* remove the border around linked images. <img border="0" ..../> is invalid in XHTML 1.1 */
+}
+#innerLeftColumn img
+{
+	display: block;
+	margin: 0 auto;
+	text-align: center;	/* IE 5 centering hack */
+}
+#innerLeftColumn, #innerContentColumn
+{
+	overflow: visible;	/* fix the Win32 IE italics bug */
+	height: 100%;		/* ditto */
+}
+#innerleftcolumn, #innercontentcolumn
+{
+	overflow: hidden;	/* IE5.0 fix the Win32 IE italics bug */
+	width: 100%;
+	height: auto;
+}
+#innerleftcolumn/* hide from IE5.0 */, #innercontentcolumn/* hide from IE5.0 */
+{
+	overflow: visible;	/* reset IE5.0 fix for 5.5 */
+	height: 100%;		/* ditto */
+	width: auto;		/* reset Safair after picking up the above IE5.0 fix : it's case insensitive to CSS selectors */
+}
+* html #masthead
+{
+	position: relative;
+}

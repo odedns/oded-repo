@@ -1,0 +1,222 @@
+body {font:small/1.22em arial,helvetica,clean,sans-serif;font:x-small/1.2em; text-align:center; background:white !important; margin:0}
+html>body {font:83%/1.22em arial,helvetica,clean,sans-serif;}
+
+h1, h2, h3, h4, h5, h6, p {line-height:1.2em; color:#E76300; font-size:100%; margin:0 17px;}
+p {color:#000; margin-bottom:1em }
+h1 { font-size: 120%; padding:0; padding-top:18px}
+#promo h1 { padding-top:0}
+.wiki h1 { font-size: 120%; padding:0; margin-bottom:1em}
+h2 { font-size: 110%; margin-top:1.5em; margin-bottom:.2em; padding:1em 0 0 0; border-top:1px dashed #C3D2DC;}
+h2.first { border-top:none; margin-top:0; margin-bottom:.2em}
+h4 {
+	color: #000;
+}
+
+.wiki h2 { font-size: 110%; margin-top:1.5em; margin-bottom:1em; padding:1em 0 0 0; border-top:1px dashed #C3D2DC;}
+.wiki h3 { padding-left:.6em; margin-bottom:1em;}
+.wiki ul ul li { margin-top:1em; padding-bottom:1em; }
+
+a {color:#0000de;} 
+a:visited {color:#639}
+a:active {color: #f00;}
+
+h1 a { color:#E76300; }
+h1 a:visited {color:#E76300}
+
+textarea {width:720px; height:20em; margin-left:17px}
+textarea.terms { height:8em; margin-bottom:1em}
+h4 {margin-top:1em;}
+
+#logo_pane { display: none; }
+
+#hd, #ft, #ygma, #yws { margin:0 auto; width:960px; text-align:left}
+#ygma { margin:.5em auto 1em auto; }
+
+#bd { margin:0 0 0 200px;}
+#bd.mid { margin:0 170px 0 200px}
+#bd.mid p.postdate {font-size:.8em; color:#668AA8; text-align:right; margin:-1em 15px 0 0}
+
+#bd ol {}
+#bd ol li p { margin-left:0}
+#bd ol li ol {list-style:lower-alpha}
+#bd ol li ol li {margin-bottom:1em}
+#bd ol li ol li ol{list-style:lower-roman}
+#bd ol li ol li ol li {margin-bottom:1em}
+
+#bd p.errormessage {background:url(http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/alertbubble.gif) 0 0 no-repeat; padding-left:30px; margin:2em 2em 2em 1em; font-weight:bold}
+
+#bd #feedback {border:1px solid #FFE9B7; background:#FEF7E6; padding:.3em 1em; margin:2em 17px}
+#bd #feedback p {margin:0; padding:0; text-align:center; }
+#bd #feedback a {display:block; text-align:center; }
+
+#bd ul { margin-top:-1em }
+#bd ul.topspace { margin-top:1em }
+#bd ul li { margin-right:17px }
+#bd ul li ul { margin-top:0em }
+#bd table { margin:10px 17px; width:720px; }
+#bd th { background:#B6CDE1; padding:2px; color:#fff; vertical-align:top}
+#bd td { padding:2px; vertical-align:top}
+#bd td.even { background:red; }
+
+#bd ol.getstarted { margin:0; padding:0; list-style-position:inside; }
+#bd ol.getstarted li { font-weight:bold; color:#668AA8; margin-bottom:1em; padding-left:20px;}
+#bd ol.getstarted li p { color:#000; font-weight:normal; margin:0 0 0 20px; padding:0 }
+
+/* OMG this is horrible!  */
+#bd div.services { height:5.5em; float:none; margin-left:17px; margin-top:-.6em}
+#bd .services ul { margin:0; padding:0; width: 150px; float:left; list-style:disc;}
+#bd .services ul.large { width: 150px; }
+#bd .services ul li { padding-left:0; margin-left:20px}
+
+/* sample querys */
+#bd form.samplequery fieldset {border:none; margin-left:17px; padding:0}
+#bd form.samplequery div {padding:.2em 0; margin:0; }
+#bd form.samplequery div label {display:block; float:left; width:4em;}
+#bd form.samplequery div input {width:200px; }
+#bd form.samplequery div input.sbmt {width:auto; margin-left:4em;}
+#bd form.samplequery div textarea {width:400px; height:5em; margin:0;}
+
+#mtcomments {width: 400px; text-align:left;}
+
+h2.classname { border-top:none; margin-top:0; margin-bottom:.2em; font-size: 130%; color:#000000}
+h3.breadcrumb { border-top:none; margin-top:0; margin-bottom:.2em; font-size: 80%; color:#000000}
+h3.methods { border-top:none; margin-top:0; margin-bottom:.2em; font-size: 100%; color:#000000}
+
+#bd ul.plain {
+	margin-top: 0;
+	list-style: none;
+}
+
+#bd ul.plain ul {
+	margin-top: 0;
+	list-style: none;
+}
+
+#bd ul.jump {
+	list-style: none;
+	margin-top: 1em;
+}
+#bd ul.jump li {
+	margin-top: .5em;
+}
+.screenshot {
+	border: thin solid #999999;
+	margin: 8px;
+}
+
+#codebox {
+		margin: margin:0 0 0 22%;
+		padding: 10px 10px 10px 50px;
+		border: 1px dotted #ccc;
+		background: #f6f9ff;
+		color: #4d7097;
+		font-family: Times;
+		font-size: 110%;
+
+}
+/* new correct codeboxes */
+.codebox {
+	margin-left:17px;
+	padding: 1em;
+	border: 1px dotted #666666;
+	padding: 5px 8px;
+	background: #ECF5FA;
+	font-family: "Lucida Sans Typewriter", "Courier New", Courier, mono;
+	font-size: .8em;
+	width: 720px;
+	overflow:auto;
+}
+tt, code {
+	font-family: "Courier New", Courier, mono;
+}
+	
+p.date, p.datecomment {font-size:80%; color:#668AA8; font-weight:bold}
+p.datecomment {margin-bottom:2em;}
+
+#promo {border: 1px solid #B6CDE1; padding:17px 0 5px 0; position:relative; width:auto;}
+#promo h2 {line-height:1.2em; color:#668AA8; margin-top:0; padding-top:0; border:none; font-size:100%}
+#promo p { line-height:1.2em }
+#promo h1 em {float:right; top:0; right:0; font-style:normal; font-size:80%}
+#promo h4 { color:#E76300; }
+
+#yws { margin:1em auto;}
+
+#toc { width:180px; float:left; background-color:#ecf5fa; padding:0; border:1px solid #89d }
+#toc ul {list-style:none; margin:0; padding:0; font-size:90%; }
+#toc ul li { padding:0; margin:0; }
+#toc ul li.selected { font-weight:bold; color:#fff; background:#f82; padding:2px 2px 2px 10px; }
+#toc ul li a { display:block; padding:2px 2px 2px 10px; text-decoration:none; }
+#toc ul li a:hover { color:#fff; background:#e60; }
+#toc ul li em { display:none; }
+#toc ul li.sect { font-weight:bold; color:#fff; background:#89d; padding:2px 2px 2px 5px; }
+
+#ftrd { width:170px; margin:0 1px 5em 0; display:inline;  float:right;}
+#ftrd div {border: 1px solid #B6CDE1; padding:10px 10px 0 10px; margin-bottom:1.5em; background-color:#ecf5fa;}
+#ftrd div#blognav div {border:none; padding:0; margin:0; background:transparent;}
+#ftrd h4, #ftrd h5, #ftrd p, #ftrd ul { padding:0; margin:0; font-size:90%;  text-indent:0}
+#ftrd h4 { color:#e60;}
+#ftrd form {margin:0 0 1em 0; padding-bottom:1em; border: 1px solid #B6CDE1; padding:5px 10px 0 5px; text-align:center;}
+#ftrd form h4 { color:#668AA8; text-align:left; }
+#ftrd input {margin:.2em 0; font-size:.8em;  }
+#ftrd input.text { height:1.4em; padding:0; width:140px;}
+
+
+#ftrd fieldset {border:0; margin:5px 0 0 0; padding:0 }
+#ftrd div.yschact {border:1px solid red; margin:0; padding:0 }
+#ftrd input#yschsp {width:140px}
+
+#ftrd #cal {background:white}
+
+#ftrd p { line-height:1.4em; padding-top:.2em; margin-bottom:1em}
+#ftrd p.newsection { margin-top:1em; padding-top:1em; border-top: 1px solid #B6CDE1;}
+#ftrd ul {list-style:square; margin:0 0 1em 0; }
+#ftrd li {margin-left:14px; padding-top:.2em; color:#748DA3;}
+
+#ft { border-top:1px solid #B6CDE1; margin-top:4em }
+#ft p { padding-bottom:2em; margin:0; text-align:center; font-size:80%; line-height:1.4em}
+#ft p.first { padding:1em 0 0 0; margin:0; }
+
+#cal {position:relative; left:-5px; margin:10px -10px 0 0; width:auto;}
+#cal h5 {color:#668AA8; text-align:left; margin:0; font:normal bold 80%/1.2em verdana,arial,helvetica,sans-serif}
+#cal table {width:100%; margin:0 0 10px 0; padding:0; border:0; }
+#cal td, #cal th { margin:0; padding:.1em 0; border:0; color:#C5C5C5; text-align:center; width:14%; font:normal bold 70%/1.2em verdana,arial,helvetica,sans-serif}
+
+p#syndicate {border-top: 100px solid red;} 
+
+#hd { width:958px; background: url(http://us.i1.yimg.com/us.yimg.com/i/ydn/bg_hd.gif) 0 0 repeat-x #B6CDE1; border: 1px solid #93B2CC; position:relative;}
+#hd h1 { width:960px; text-indent:15px; padding:4px 0 2px 0; background: url(http://us.i1.yimg.com/us.yimg.com/i/ydn/title_h_bg.gif) 0 0 no-repeat;  margin:0; color:#000; font-size:120%; font-weight:bold; position:relative; left:-1px; top:-1px; margin-right:-2px;}
+#hd h1 em {color:#FF9933; font-size:60%; font-weight:bold; font-style:normal; position:relative; top:-6px}
+
+/* promo module */
+#hppromo { border:1px solid #B6CDE1; background:#fff url(http://us.i1.yimg.com/us.yimg.com/i/ydn/logo_purple_ybang.gif) no-repeat top right; margin:0 0 0 5px; padding:0; width:380px}
+#hppromo h2, #hppromo h3, #hppromo p {margin:0; padding:5px 10px; margin-left:-1px; border:none}
+#hppromo h2 {font:bold 280%/1.2em arial,verdana; color:#E76300;}
+#hppromo h3 {font:bold 100%/1.2em arial,verdana; color:#000;padding:0 10px;}
+#hppromo p {padding-bottom:10px; }
+#hppromo p strong {color:#E76300;}
+#hppromo .corner-top { display:block; font-size:0; line-height:0; margin:0; height:8px; width:100%; position:relative; top:-1px; right:-1px;
+    background:transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_tr_bb.gif) no-repeat top right;}
+#hppromo .corner-top .corner-left { display:block; font-size:0; line-height:0; margin:0; height:8px; width:8px; position:relative; left:-2px;
+    background:transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_tl_bb.gif) no-repeat top left; }
+#hppromo .corner-bottom { display:block; font-size:0; line-height:0; margin:0; height:8px; width:100%; position:relative; bottom:-1px; right:-1px;
+    background: transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_br_bb.gif) no-repeat bottom right;}
+#hppromo .corner-bottom .corner-left {display:block; font-size:0; line-height:0; margin:0; height:8px; width:8px; position:relative; left:-2px;
+    background: transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_bl_bb.gif) no-repeat bottom left;}
+
+/* application promo module */
+#apppromo { border:1px solid #B6CDE1; margin:0 0 0 5px; padding:0; width:380px}
+#apppromo h2, #hppromo h3, #hppromo p {margin:0; padding:5px 10px; margin-left:-1px; border:none}
+#apppromo h2 {font:bold 130%/1.2em arial,verdana; color:#E76300;}
+#apppromo h3 {font:bold 100%/1.2em arial,verdana; color:#000;padding:0 10px;}
+#apppromo p {padding-bottom:2px; }
+#apppromo p strong {color:#E76300;}
+#apppromo ul {list-style:square; margin:0 0 1em 0; }
+#apppromo li {margin-left:14px; padding-top:.2em; color:#748DA3;}
+#apppromo .corner-top { display:block; font-size:0; line-height:0; margin:0; height:8px; width:100%; position:relative; top:-1px; right:-1px;
+    background:transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_tr_bb.gif) no-repeat top right;}
+#apppromo .corner-top .corner-left { display:block; font-size:0; line-height:0; margin:0; height:8px; width:8px; position:relative; left:-2px;
+    background:transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_tl_bb.gif) no-repeat top left; }
+#apppromo .corner-bottom { display:block; font-size:0; line-height:0; margin:0; height:8px; width:100%; position:relative; bottom:-1px; right:-1px;
+    background: transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_br_bb.gif) no-repeat bottom right;}
+#apppromo .corner-bottom .corner-left {display:block; font-size:0; line-height:0; margin:0; height:8px; width:8px; position:relative; left:-2px;
+    background: transparent url(http://us.i1.yimg.com/us.yimg.com/i/ydn/crn_bl_bb.gif) no-repeat bottom left;}

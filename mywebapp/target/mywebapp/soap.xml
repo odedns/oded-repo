@@ -1,0 +1,12 @@
+<!-- Apache SOAP Server Configuration File -->
+
+<soapServer>
+  <!-- This ConfigManager looks for a dds.xml file in this         -->
+  <!-- directory. The dds.xml file should contain a <root> element -->
+  <!-- which has deployment descriptor <isd:service> elements as   -->
+  <!-- children.                                                   -->
+  <configManager value="com.ibm.soap.server.XMLDrivenConfigManager"/>
+  <serviceManager>
+    <option name="SOAPInterfaceEnabled" value="false" />
+  </serviceManager>
+</soapServer>

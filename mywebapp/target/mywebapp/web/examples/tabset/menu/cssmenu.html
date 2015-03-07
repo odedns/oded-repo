@@ -1,0 +1,109 @@
+
+<HTML>
+
+<HEAD>
+<style type="text/css">
+
+#coolmenu{
+border: 1px solid black;
+width: 170px;
+background-color: #E6E6E6;
+}
+
+#coolmenu a{
+font: bold 13px Verdana;
+padding: 2px;
+padding-left: 4px;
+display: block;
+width: 100%;
+color: black;
+text-decoration: none;
+border-bottom: 1px solid black;
+}
+
+html>body #coolmenu a{
+width: auto;
+}
+
+#coolmenu a:hover{
+background-color: black;
+color: white;
+}
+
+#tabledescription{
+width: 100%;
+height: 3em;
+padding: 2px;
+filter:alpha(opacity=0);
+-moz-opacity:0;
+}
+
+</style>
+
+<script type="text/javascript">
+
+// Cool CSS Menu- By JavaScriptKit.com (http://www.javascriptkit.com)
+// For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+// Fading routine based on Dynamic Drive script: http://www.dynamicdrive.com/dynamicindex4/highlightgrad.htm
+// This notice must stay intact for use
+
+var baseopacity=0
+
+function showtext(thetext){
+if (!document.getElementById)
+return
+textcontainerobj=document.getElementById("tabledescription")
+browserdetect=textcontainerobj.filters? "ie" : typeof textcontainerobj.style.MozOpacity=="string"? "mozilla" : ""
+instantset(baseopacity)
+document.getElementById("tabledescription").innerHTML=thetext
+highlighting=setInterval("gradualfade(textcontainerobj)",50)
+}
+
+function hidetext(){
+cleartimer()
+instantset(baseopacity)
+}
+
+function instantset(degree){
+if (browserdetect=="mozilla")
+textcontainerobj.style.MozOpacity=degree/100
+else if (browserdetect=="ie")
+textcontainerobj.filters.alpha.opacity=degree
+else if (document.getElementById && baseopacity==0)
+document.getElementById("tabledescription").innerHTML=""
+}
+
+function cleartimer(){
+if (window.highlighting) clearInterval(highlighting)
+}
+
+function gradualfade(cur2){
+if (browserdetect=="mozilla" && cur2.style.MozOpacity<1)
+cur2.style.MozOpacity=Math.min(parseFloat(cur2.style.MozOpacity)+0.2, 0.99)
+else if (browserdetect=="ie" && cur2.filters.alpha.opacity<100)
+cur2.filters.alpha.opacity+=20
+else if (window.highlighting)
+clearInterval(highlighting)
+}
+
+</script>
+
+</HEAD>
+
+<BODY>
+<div id="coolmenu">
+<a href="http://www.javascriptkit.com" onMouseover="showtext('JavaScript tutorials and scripts!')" onMouseout="hidetext()">JavaScript Kit</a>
+<a href="http://www.javascriptkit.com/cutpastejava.shtml" onMouseover="showtext('300+ free JavaScripts')" onMouseout="hidetext()">Free JavaScripts</a>
+<a href="http://www.javascriptkit.com/jsref/" onMouseover="showtext('Comprehensive JavaScript Reference')" onMouseout="hidetext()">JavaScript Reference</a>
+<a href="http://www.codingforums.com" onMouseover="showtext('Web coding and development forums!')" onMouseout="hidetext()">Coding Forums</a>
+<a href="http://www.dynamicdrive.com" onMouseover="showtext('Award winning DHTML and JavaScripts')" onMouseout="hidetext()">Dynamic Drive</a>
+<div id="tabledescription"></div>
+</div>
+
+<p style="font: normal 11px Arial">This free script provided by<br />
+<a href="http://www.javascriptkit.com">JavaScript Kit</a></p>
+
+
+</BODY>
+
+</HTML>

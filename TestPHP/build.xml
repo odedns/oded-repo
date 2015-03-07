@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+	<project name="testphp" default="my-package" basedir="." xmlns:sap="antlib:com.sap.ca.ant" xmlns:contrib="antlib:net.sf.antcontrib" 
+		 xmlns:ivy="antlib:org.apache.ivy.ant">   	
+	 <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+	<property file="build.properties" />
+	<if>
+	     <equals arg1="${env.BUILD_OPTS}" arg2="remote" />
+	  <then>
+	     <sap:bootstrap ivysettings="${ivy.settings.remote.buildframework.url}/${ivy.settingsfile}" dir="${ivy.bootstrap.basedir}"/>
+	  </then>
+	  <else>
+	     <sap:bootstrap ivysettings="${ivy.settings.remote.buildframework.url}/ivysettings.xml" dir="${ivy.bootstrap.basedir}"/>
+	  </else>
+	  </if>
+	<import file="${ivy.bootstrap.home}/build.jar.xml"/>
+	
+	
+	
+	<target name="my-package"  depends="init" description="Compiles and packages the project to jar">
+
+			<echo>This is target package</echo>
+			<zip destfile= "${build.artifacts}/testphp.zip" basedir="public"/> 			
+	</target>
+		
+	<target name="my-publish"  depends="my-package" description="Compiles and packages the project to jar">
+		<ivy:publish resolver="local" pubrevision="1.0">
+		    <artifacts pattern="build/artifacts/[artifact].[ext]" />
+		</ivy:publish>
+		
+	</target>
+		
+	 <target name="my-publish-local" depends="my-package">    
+		        <ivy:info />	
+		    	<echo>"Publishing artefact: Branch = ${publish.branch} ; Revision = ${publish.revision} ; Status = ${publish.status}; Date = ${publish.date}"</echo>
+		        <ivy:publish resolver="local" overwrite="true" update="true" pubdate="${publish.date}" pubrevision="${publish.revision}" status="${publish.status}" pubbranch="${publish.branch}">
+		            <artifacts pattern="${basedir}/${build.artifacts}/[artifact].[ext]" />
+		        </ivy:publish>
+     </target>	
+		
+</project>
+	

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>nav_head.html</title>
+</head>
+<body>
+<table class="nav_head" cellspacing="0" cellpadding="0" border="0" width="100%">
+   <tbody>
+      <tr>
+         <td width="150"><img src="c.gif" width="150" height="1" border="0" alt=""></td>
+         <td>
+         <table border="0" cellspacing="2" cellpadding="2">
+            <tbody>
+               <tr>
+<!--siteedit:forEach var="item" items="${sitenav.items}"-->
+ <!--siteedit:choose-->
+  <!--siteedit:when test="${item.self}"-->
+                  <td class="nav-h-highlighted">${item.label}</td>
+  <!--/siteedit:when-->
+  <!--siteedit:when test="${item.group}"-->
+                  <td class="nav-h-group">${item.label}:</td>
+  <!--/siteedit:when-->
+  <!--siteedit:otherwise-->
+                  <td class="nav-h-normal"><a href="${item.href}">${item.label}</a></td>
+  <!--/siteedit:otherwise-->
+ <!--/siteedit:choose-->
+<!--/siteedit:forEach-->
+               </tr>
+            </tbody>
+         </table>
+         </td>
+         <td width="5"><img src="c.gif" width="5" height="1" border="0" alt=""></td>
+      </tr>
+   </tbody>
+</table>
+</body>
+</html>

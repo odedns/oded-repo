@@ -1,0 +1,58 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="./ember-1.0.0-pre.2.min.js"></script>
+</head>
+<body>
+<script type="text/x-handlebars" data-template-name="default">
+{{#view App.UserView }}
+<b>Name:</b> {{name}}
+{{/view}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="about">
+
+	<p>This is the about template
+
+</script>
+
+
+<button onclick="btnTest_OnClick()" id="btnTest">Click me to change</button>
+ 
+<script type="text/javascript">
+    window.App = Ember.Application.create();
+ 
+    function btnTest_OnClick() {
+    	alert("in onClick");
+        App.userController.changeModel();
+    }
+ 
+    $(document).ready(function() {
+ 
+        App.Person = Ember.Object.extend({
+            id: 0,
+            name: ""
+        });
+ 
+        var person = App.Person.create();
+        person.name = "Duncan";
+        person.id = 0;
+ 
+        App.userController = Ember.Object.create({
+            content: person,
+            changeModel: function () {
+                this.content.set('name', 'Joe');
+            }
+        });
+ 
+         App.UserView = Ember.View.extend({
+            nameBinding: 'App.userController.content.name'            
+        });
+ 
+   });
+ 
+</script>
+ 
+ 
+</body>
+</html> 

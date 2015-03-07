@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="index_files/simple.css">
+		<style type="text/css">
+			@import "css/complex.css";
+			@import "css/complex_vnav.css";
+			@import "css/complex_hnav.css";
+		</style>
+		<link rel="stylesheet" type="text/css" href="index_files/theme.css">
+		<title>Ruthsarian Layouts - 2col.v5</title></head><body>
+
+		<div id="oldbrowser">
+			<p>
+				This site will look much better in a browser that supports 
+				<a href="http://www.webstandards.org/upgrade/" title="Download a browser that complies with Web standards.">web 
+				standards</a>, but it is accessible to any browser or Internet 
+				device.
+			</p>
+		</div>
+
+		<div id="pageFrame">
+
+			<div id="masthead">
+				<h1>Ruthsarian Layouts - 2col.v5</h1>
+			</div>
+
+			<div class="hnav">
+				<ul><li><a href="http://webhost.bridgew.edu/etribou/">Ruthsarian</a><span> | </span></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/">Layouts</a><span> | </span></li><li><a href="http://webhost.bridgew.edu/etribou/software/">Labs</a><span> | </span></li><li><a href="http://weblog.bridgew.edu/ruthsarian/">Blog</a><span> | </span></li><li><a href="mailto:ruthsarian@gmail.com">Contact</a></li></ul>
+			</div>
+
+			<div id="leftColumn">
+				<div id="innerLeftColumn">
+					<div class="vnav">
+
+						<ul><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/simple.css">simple.css</a></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex.css">complex.css</a></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex_vnav.css">complex_vnav.css</a></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex_hnav.css">complex_hnav.css</a></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/colors.css">colors.css</a></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/theme.css">theme.css</a></li><li><a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/lightyellow.gif">lightyellow.gif</a></li></ul>
+
+					</div>
+					<p>
+						<a href="http://validator.w3.org/check/referer"><img src="index_files/valid-xhtml11.png" alt="Valid XHTML 1.1!" height="31" width="88"></a>
+					</p>
+					<p>					
+						<a href="http://jigsaw.w3.org/css-validator/"><img src="index_files/vcss.png" alt="Valid CSS!" height="31" width="88"></a>
+					</p>
+					<p>
+						The background color for this column is actually a 200 pixel wide 
+						.GIF applied to the pageFrame element with background-repeat of repeat-y.
+					</p>
+
+					<h3>Background Colors</h3>
+					<p>
+						You can delete or change the background in the <a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/colors.css">colors.css</a> file,
+						along with the background/foreground colors for any other element in this page.
+					</p>
+					<p>
+						When picking colors, try to use shades of the same color. It provides a
+						more uniform, clean look and feel.
+					</p>
+					<p>
+						Another method in choosing a color scheme is to find something you
+						see in life that you think is beautiful, then steal its color scheme.
+						For example, if you see a poster that looks great, try using
+						its color scheme in the layout.
+					</p>
+
+					<h3>Fonts</h3>
+					<p>
+						Font family (face type) and size can be changed using the
+						<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/theme.css">theme.css</a> stylesheet. This stylesheet
+						is read in by Netscape 4 so some care should be taken with what is put
+						in here. Or you could just @import this file which would basically hide
+						it from Netscape 4.
+					</p>
+					<p>
+						One might look into shrinking the font size
+						for innerContentColumn  (the white background area) or increasing
+						the font sizes used in the horizontal and vertical menus.
+					</p>
+					<p>
+						<em>
+							x x x x x this is to test the italics bug in ie x x x x x  
+						</em>
+					</p>
+
+				</div>
+			</div>
+
+			<div id="contentColumn">
+				<div id="innerContentColumn">
+					<!--p style="border:dotted 1px #900;padding:0.3em;background-color:#ffe;">
+						Moving all future update notes (at leas, for now) to a new
+						<a href="http://weblog.bridgew.edu/ruthsarian/">weblog</a>. Be sure to
+						check there for further information on this layout.<br />
+						<br />
+										
+						<strong>Updated 5.11.2004</strong><br />
+						A big (enough) update to push the version number up one. Details follow.<br />
+						<br />
+						Two lingering IE5.0/Win bugs have been fixed. The first was a rendering bug on the masthead.
+						Removing a position:relative application to the masthead and hnav blocks seemed to fix that. I use
+						to use position:relative to fix a few IE bugs back in the day but it appears that hack is no longer
+						needed in this layout.<br />
+						<br />
+						The other bug was related to the <a href="http://www.positioniseverything.net/guests/italicbug-ie.html">IE italics</a>
+						bug. I had a partial fix which worked in IE 5.5 and 6 but didn't work in IE 5.0. I've now developed a fix
+						which seems to work pretty well. The story of this particular bug is <a href="#IEitalics">documented below</a>.<br />
+						<br />
+						You may notice <a href="../mbar/">MBar.v2</a> which has a horizontal navigational element using
+						anchors as buttons and wonder why, if that works in IE 5.0, why doesn't the horizontal
+						menu on this page doesn't have the :hover effects working under IE 5.0. The simple answer
+						is that they use different implementations. The <a href="../mbar/">MBar.v2</a> buttons
+						are floated, the ones in the horizontal menu here are just set to display inline. IE 5.0
+						doesn't like to apply padding to inline elements. IE 5.5 and above do that just fine. Without
+						the padding, the :hover effects look really bad.<br />
+						<br />
+						<em>So float the horizontal nav elements!</em> You can if you want, but I won't right now. First,
+						you can't get the elements centered if you float them (at least, not without a LOT of difficulty
+						and hackery, including some javascript), also floated elements add new bugs that'd have to be
+						fixed and finally, to make floated elements appear right-aligned, you have to reverse the order
+						that you want them displayed in, in your HTML. That means some users will see the list displayed
+						backwards from how you intended it.<br />
+						<br />
+						<a href="../mbar/">MBar.v2</a> is just an experimentation. Anyone who doesn't care
+						about IE 4 or the backwards ordering can use it without care. But for the purposes
+						and the intention of this layout, that effect isn't used here.
+					</p-->						
+					<p>
+						You may copy any and all content, including stylesheets and HTML source, from this webpage.
+						This work is presented for anyone who wants it, free of any copyrights or license restrictions.
+						In other words, take my webpage, please.
+					</p>
+					<p>
+						This page includes links to all CSS files used on this page. This makes it possible
+						to use a <a href="http://www.gnu.org/software/wget/wget.html">web site mirror tool</a>
+						to download this page and everything needed to display it in 
+						<span title="wget -m http://webhost.bridgew.edu/etribou/layouts/2col_footer_04/" style="border-bottom: 1px dashed rgb(153, 153, 153); cursor: help;">one action</span>.
+					</p>
+
+					<h3>Primary Goals</h3>
+					<p>
+						A two-column layout using <em>only</em> CSS (ie. <em>no tables</em>) that 
+						allowed for a footer that could span both columns and appear at the bottom
+						regardless of which column was "taller". Support all major browsers and 
+						degrade well in browsers with poor or no CSS support. This includes 
+						<em>Netscape 4</em>.
+					</p>
+
+					<h3>Secondary Goals</h3>
+					<p>
+						Be able to show the separation of columns in some manner (borders) using <em>only</em> CSS
+						<em>(ie. no images, background or otherwise)</em>. Include a masthead (<em>trivial</em>) and
+						include menus based on unordered lists. Background colors for individal
+						columns is possible but, presently, only through the use of a background image to act
+						as one column's (usually left-hand column) background color.
+					</p>
+
+					<h3>The Basic Idea</h3>
+					<p>
+						The left-hand column has a specified width (200px in this case) and is floated left.
+						The main (content) column does not have a specified width but is set with
+						a left-side margin the same width as the left-hand column. The footer box
+						has the CSS clear attribute set to <em>left</em> so that regardless of which
+						column (left or content) is taller, the footer will always be at the bottom. 
+					</p>
+
+					<h3>Important Details</h3>
+					<p>
+						The entire layout is encased within a parent <em>DIV</em> block called <em>pageFrame</em>.
+						This allows for a margin to be applied to the entire page without having to edit the CSS
+						properties of several different elements. It also allows for a very easy way to
+						set this layout to a fixed width, should such a thing be desired.
+					</p>
+					<p>
+						The use of borders is fairly straight-forward. The only time things start to get tricky
+						is with the border separating the left and content columns. The problem here is that
+						if we define the border to belong to the left-hand column, that separating line will
+						only be as tall as the left-hand column. If we switch it to the content column, then if
+						the left-hand column is longer, that line is going to stop at before it reaches
+						the footer. We are using a fluid layout so we have no way of knowing what type of 
+						settings the end-user has. So to cover both situations (left is longer than content, content is 
+						longer than left) <em>both</em> borders are defined and made to overlap.
+					</p>
+					<p>
+						To overlap borders we have to get pixel-perfect. This is why the left-hand column is set at 200px
+						in width but the content column's left-hand margin is set at 199px. However this doesn't work completely
+						in old browsers. Thus there is some extra CSS in the <a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/simple.css">simple</a> stylesheet
+						dealing with widths and margins of the left-hand column that seem a bit useless. IE 4
+						needs a -200px right-hand margin on the left-hand column and Netscape 4 needs a 2px left-hand
+						margin on the left-hand column. In the end, it works, and that's really what matters.
+					</p>
+
+					<h3>A Key Trick</h3>
+					<p>
+						Looking through the source for this page will show several instances (3) where
+						there is a <em>DIV</em> block within which an inner <em>DIV</em> block is placed
+						<em>(Such as leftColumn contains innerLeftColumn)</em>. The reason for this is that
+						IE and Mozilla (among other browsers) have varying methods for measuring the width and height
+						of boxes. IE will include margin, padding, and borders within a specific width
+						of a layout. Mozilla, conforming to CSS standards, takes the defined width of a box and then
+						adds padding, borders and margin on top of it. This different in box models created
+						a nasty problem web developers have been trying to solve for years. The most common
+						solution has been to use the <a href="http://www.tantek.com/CSS/Examples/boxmodelhack.html">box
+						model hack</a>. However I have taken a different approach.
+					</p>
+					<p>
+						To solve the box model riddle, one box is placed within another. The outer block contains
+						the width (and height) dimension attributes <em>and only those two attributes which affect
+						a box's dimensions</em>. The inner box is where padding, border and margins can be applied.
+						By using this method, both IE and Mozilla will render boxes correctly regardless of
+						what box model is being used. In this way we can steer clear of using the
+						<a href="http://www.tantek.com/CSS/Examples/boxmodelhack.html">box
+						model hack</a>. Not that the <a href="http://www.tantek.com/CSS/Examples/boxmodelhack.html">box
+						model hack</a> is bad or should not be used. It's just a personal taste to stay away
+						from that particular hack.
+					</p>
+
+					<h3>Who Cares About Netscape 4?!</h3>
+					<p>
+						I do, because there's a greater point to be made. I just wish I knew what it was. It has 
+						something to do with trying to make an effort to support all your users, and that even if
+						you only have, for example, an IE 6 user base, the exploration to support other browsers and the 
+						learning from that experience is more valuable than the time saved by ignoring the fringe.
+					</p>
+					<p>
+						But that might be a point of view shared only by die-hard CSS/web developers who
+						are sick enough to actually enjoy that kind of exploration. We call them masochists.
+					</p>
+					<!--p>
+						<strong>A story:</strong> A machine becomes corrupt. This machine has data on it you need
+						quickly. There are no other computers around to move that internal tape storage device to.
+						The OS must be reloaded and the only thing available is an old copy of Windows 95. The OS
+						is installed, by luck, there's native support for the modem. However there is no native 
+						support for that tape storage device. So it's onto the Internet to download the proper drivers.
+						But the only browser available is IE3 that comes with Win95. If that driver download website doesn't
+						support IE3, how can those drivers be downloaded? They can't, and the information is needed in
+						the next 10 minutes. Uh oh. But, if that driver download website is designed to function well
+						in older browsers, such as IE3, then the day has been saved.
+					</p>
+					<p>
+						The moral is that, even though you've got 98% coverage in your design, that 2% could be 
+						the most important to support, and sometimes that lack of support could come back
+						to bite you in the ass.						
+					</p-->
+					<h3>
+						Stylesheets Used &amp; Their Purposes
+					</h3>
+					<dl>
+						<dt>
+							<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/simple.css">simple.css</a>
+						</dt>
+						<dd>
+							This is where any universally-browser-safe CSS goes. This
+							stylesheet is the only thing that will be seen by Netscape 4 and
+							any other old browsers with minimal CSS support. Thus
+							enough needs to be here to generate this layout but it must be <em>safe</em>
+							CSS.
+						</dd>
+						<dt>
+							<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex.css">complex.css</a>
+						</dt>
+						<dd>
+							Any <em>non-safe</em> styles go here. This may crash Netscape 4
+							and other browsers that don't properly support even basic CSS.
+						</dd>
+						<dt>
+							<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex_hnav.css">complex_hnav.css</a>
+						</dt>
+						<dd>
+							This stylesheet handles the layout of the horizontal menu seen above.
+							If you want to delete that menu, simply remove this style sheet and
+							the <em>DIV</em> block with the id of <em>hnav</em> from the source
+							of this page and you will be all set.
+						</dd>
+						<dt>
+							<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex_vnav.css">complex_vnav.css</a>
+						</dt>
+						<dd>
+							Likes the above stylesheet except this one is for the vertical menu
+							seen to the left. Both menus are formed from unordered lists, meaning
+							without these stylesheets the page will still render fine and the logic
+							of the layout still works.
+						</dd>
+						<dt>
+							<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/theme.css">theme.css</a>
+						</dt>
+						<dd>
+							This stylesheet is used to apply a theme over the base layout look.
+							This is where font and color choices should go. Layout changes, such
+							as border and column sizes, should not go here. This stylesheet
+							is linked in such a manner that Netscape 4 will read it. So only
+							<em>safe</em> CSS can go here.
+						</dd>
+						<dt>
+							<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/colors.css">colors.css</a>
+						</dt>
+						<dd>
+							Default setup has this stylesheet imported in from <a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/theme.css">theme.css</a>. 
+							This is because Netscape 4 adds some space between the edge of a box and where its border is drawn. Meaning that
+							boxes with a background color will have an area near the edge where you can see what's underneath that box. Ick.
+							But, this is also a great way to help spread out the various aspects of the layout's styles and make
+							it much more managable. Now one does not have to seek through long CSS files to find background-color entries.
+							Here they are, and easy to manage.
+						</dd>
+					</dl>
+
+					<h3>CSS Hacks Used</h3>
+					<p>
+						CSS hacks are used in this layout. The reason being that there are some small
+						bugs within individual browsers that can throw off the layout. The use of 
+						overlapping borders in this layout requires pixel perfection which only added
+						to the need for CSS hacks. This layout tries to use only simple, valid CSS generating 
+						CSS hacks. The stylesheets contain some explanations of what CSS hacks
+						were used and why.
+					</p>
+
+					<a id="IEitalics"></a>
+					<h3>IE and Italics</h3>
+					<p>
+						It appears that IE5/Win does not take the width of italicized text into consideration when
+						calculating the width of a box and where to auto-wrap the text within said box.
+						When the text is finally rendered inside the box, the wrapping positions are off and some
+						lines are wider than the box. IE's rendering engine makes room by increasing the box's width. 
+						However all other boxes, which have already been sized,	are now too wide to fit in the available 
+						space. This destroys the layout as IE tries to reposition all the elements within the page to
+						satisfy all space (width) constraints.
+					</p>
+					<p>
+						In the case of this layout, we have a fixed-width floated left column box and a floated variable
+						width content box on the right. Because of this bug, the content box is too wide to fit
+						in the available space and gets pushed down below the floated left column. This is not
+						desirable.
+					</p>
+					<p>
+						<a href="http://www.positioniseverything.net/guests/italicbug-ie.html">This article</a> over at PiE
+						addresses the issue I'm talking about.
+					</p>
+					<p>
+						The suggested solution is to set the overflow attribute to visible. This should have no effect
+						on any other browsers because there will be no overflow as they will correctly calculate and 
+						layout the site. However for this layout, setting the height of the column(s) in question
+						to 100% is also required.
+					</p>
+					<p>
+						This solution does not work for IE 5.0. One suggested solution is to decrease the width of the
+						box from the expected size so that when IE increases the width, there is still enough room to fit.
+						That doesn't work in this layout as the border between the left and main (content) columns is
+						made up of the appropriate border being defined on each of those two boxes. If we're even 1 pixel
+						off the border breaks.
+					</p>
+					<p>
+						The other suggested solution is to set overflow to hidden. IE 5.0 can handle this and worst case,
+						the edges of a word or two get cut off, but that shouldn't happen very often, if at all. However,
+						this fix doesn't seem to work with this layout. Most likely because of the nature of the boxes
+						we're applying the fix to and all the other CSS applied. 
+					</p>
+					<p>
+						After some trial-and-error a solution that works with this layout was found. Setting overflow to hidden
+						and also applying a width of 100% and a height of auto seems to work. The 
+						<a href="http://www.positioniseverything.net/articles/float-bugs-1.html">IE float bug(s)</a>
+						are patched by setting a height of 100%. However, it appears IE 5.0 is float-bug free 
+						even with this fix applied, thank goodness. However, just to be sure, we use a couple
+						hacks to keep the CSS in question from being applied to anything other than IE 5.0.
+					</p>
+					<p>
+						The complete solution may be found in
+						<a href="http://webhost.bridgew.edu/etribou/layouts/2col_footer/css/complex.css">complex.css</a>.
+					</p>
+
+				</div>
+			</div>
+			<div id="footer">
+				<div id="innerFooter">
+					© 2003 Anyone
+				</div>
+			</div>
+		</div>
+	</body></html>

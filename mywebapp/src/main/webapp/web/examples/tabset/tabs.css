@@ -1,0 +1,71 @@
+/*
+ +-------------------------------------------------------------------------------------+
+ |                                                                                     |
+ | DHTML Tabsets                                                                       |
+ |                                                                                     |
+ | Copyright and Legal Notices:                                                        |
+ |                                                                                     |
+ |   All source code, images, programs, files included in this distribution            |
+ |   Copyright (c) 1996,1997,1998,1999,2000                                            |
+ |                                                                                     |
+ |          John C. Cokos  iWeb, Inc.                                                  |
+ |          All Rights Reserved.                                                       |
+ |                                                                                     |
+ |                                                                                     |
+ |   Web: http://www.iwebsoftware.com      Email: info@iwebsoftware.com                |
+ |                                                                                     |
+ +-------------------------------------------------------------------------------------+
+
+    ** 
+       Original Tabset Scripts were obtained from another source.  Cannot remember
+       where I got them from.  I've manipulated the daylights out of it, to make it
+       work in all browsers, and behave the way that I wanted it to.   If you are,
+       or if you know the originater, please email me at the address noted above, and
+       I will be happy to change the copyright notices herein to include you as
+       the original source.
+    **
+
+*/
+
+
+/*  
+    Modify the following style sheet definitions as you please to get the desired look
+    and color scheme that you would like.  Note that for the tab-body definition,
+    you should also change the "width" attribute to conform to your layout.
+*/
+
+
+TD {
+    FONT-SIZE: 12px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+
+.tab-button	 { 
+    width: 70; 
+    height: 20; 
+    font-weight: normal; 
+    background: #e0e0e0; 
+    border-top: 1px solid buttonhighlight; 
+    border-left: 1px solid buttonhighlight; 
+    border-bottom: 1px solid buttonhighlight;  
+    border-right: 1px solid buttonshadow; 
+    cursor: hand; 
+    padding-top: 2px; 
+    padding: 3;
+}
+
+.tab-body	{ 
+    background: white; 
+    border-top: 0px solid buttonhighlight; 
+    border-left: 1px solid buttonhighlight; 
+    border-bottom: 1px solid buttonshadow; 
+    border-right: 1px solid buttonshadow; 
+    border-style: ridge;
+    padding: 10;    
+    position:absolute; 
+    left:10px; 
+    top:310px; 
+    width:600px; 
+    z-index:1; 
+    visibility: hidden
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+<!--  
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
+	<property name="url" value="jdbc:hsqldb:hsql://localhost/xdb" />
+	<property name="username" value="sa" />
+	<property name="password" value="" />
+</bean>
+-->
+<!--  
+  <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+      <property name="persistenceUnitName" value="myPersistenceUnit"/>
+   </bean>
+   -->
+  <bean id="testBean" class="test.spring.TestBean" scope="prototype" >
+      <!-- collaborators and configuration for this bean go here -->      
+      <property name="stat" value="1" />
+      <property name="name" value="Foo" />
+  </bean>
+  <bean id="singletonBean" class="test.spring.SingletonBean" scope="singleton" >
+  	<property name="bean" ref="testBean" /> 
+  </bean>
+  
+  <bean id="accountBean" class="test.spring.AccountServiceImpl" scope="prototype" >
+  </bean>
+  
+  
+  <bean name="/RemoteService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+  	<property name="service" ref="accountBean"/>
+  	<property name="serviceInterface" value="test.spring.AccountService"/>
+ </bean>
+ 
+  <!-- more bean definitions go here... -->
+</beans>

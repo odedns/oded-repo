@@ -1,0 +1,121 @@
+/***************************************
+   =default styles
+************************************** */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 62.5% Verdana, Helvetica, Arial, sans-serif;
+  color: #000;
+  background: #fff;
+}
+#container {
+  font-size: 1.2em;
+  margin: 10px 2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+h3 {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+a {
+  color: #06581f;
+}
+/* ----------------------------
+=Aslett Clearing Method for floats 
+-------------------------------*/  
+.clear-after:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+.clear-after {display: inline-block;}
+/* backslash hack hides from IE Mac \*/
+	* html .clear-after {height: 1%;}
+	.clear-after {display: block;}
+/* end backslash hack */
+
+
+/***************************************
+   =chapter styles
+************************************** */
+
+li {
+  padding: 0 3px;
+}
+.horizontal {
+  float: left;
+  list-style: none;
+  margin: 10px;
+}
+.sub-level {
+  background: #ccc;
+}
+a {
+  color: #00c;
+}
+a.mailto {
+  background: url(images/email.png) no-repeat 100% 2px;
+  padding-right: 18px;
+}
+a.pdflink {
+  background: url(images/pdf.png) no-repeat 100% 0;
+  padding-right: 18px;
+}
+a.henrylink {
+  background-color: #fff;
+  padding: 2px;
+  border: 1px solid #000;
+}
+a.external {
+  background: #fff url(images/external.png) no-repeat 100% 2px;
+  padding-right: 16px;
+}
+
+table {
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding: 2px 4px;
+}
+.table-heading {
+  background-color: #000;
+  color: #fff;
+  
+}
+
+.alt {
+  background-color: #ccc;
+}
+
+.highlight {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}

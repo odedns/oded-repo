@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<style type="text/css">
+
+#csstopmenu, #csstopmenu ul{
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#csstopmenu li{
+float: left;
+position: relative;
+}
+
+#csstopmenu a{
+text-decoration: none;
+}
+
+.mainitems{
+border: 1px solid black;
+border-left-width: 0;
+background-color: #D8FE89;
+}
+
+.headerlinks a{
+margin: auto 8px;
+font-weight: bold;
+color: black;
+}
+
+.submenus{
+display: none;
+width: 10em;
+position: absolute;
+top: 1.2em;
+left: 0;
+background-color: #EEFFCC;
+border: 1px solid black;
+}
+
+.submenus li{
+width: 100%;
+}
+
+.submenus li a{
+display: block;
+width: 100%;
+text-indent: 3px;
+}
+
+html>body .submenus li a{ /* non IE browsers */
+width: auto;
+}
+
+.submenus li a:hover{
+background-color: yellow;
+color: black;
+}
+
+#csstopmenu li>ul {/* non IE browsers */
+top: auto;
+left: auto;
+}
+
+#csstopmenu li:hover ul, li.over ul {
+display: block;
+}
+
+html>body #clearmenu{ /* non IE browsers */
+height: 3px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+// CSS Top Menu- By JavaScriptKit.com (http://www.javascriptkit.com)
+// Adopted from SuckerFish menu
+// For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+// Please keep this credit intact
+
+startMenu = function() {
+if (document.all&&document.getElementById) {
+cssmenu = document.getElementById("csstopmenu");
+for (i=0; i<cssmenu.childNodes.length; i++) {
+node = cssmenu.childNodes[i];
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" over";
+}
+node.onmouseout=function(){                  
+this.className=this.className.replace(" over", "")
+}
+}
+}
+}
+}
+
+if (window.attachEvent)
+window.attachEvent("onload", startMenu)
+else
+window.onload=startMenu;
+
+</script>
+
+<TITLE>index.html</TITLE>
+</HEAD>
+<BODY>
+<ul id="csstopmenu">
+
+<li class="mainitems" style="border-left-width: 1px">
+<div class="headerlinks"><a href="http://www.javascriptkit.com">JavaScript Kit</a></div>
+<ul class="submenus">
+<li><a href="http://javascriptkit.com/">Home</a></li>
+<li><a href="http://javascriptkit.com/cutpastejava.shtml">Free JavaScripts</a></li>
+<li><a href="http://javascriptkit.com/javaindex.shtml">JavaScript tutorials</a></li>
+<li><a href="http://javascriptkit.com/jsref/index.shtml">JavaScript Reference</a></li>
+</ul>
+</li>
+
+<li class="mainitems">
+<div class="headerlinks"><a href="http://www.javascriptkit.com">2nd Menu Item</a></div>
+<ul class="submenus" style="width: 14em">
+<li><a href="">Sub 2 Item 1. Long text, long menu.</a></li>
+<li><a href="">Sub 2 Item 2</a></li>
+<li><a href="">Sub 2 Item 3.</a></li>
+</ul>
+</li>
+
+<li class="mainitems">
+<div class="headerlinks"><a href="http://www.javascriptkit.com">3rd Menu Item</a></div>
+<ul class="submenus">
+<li><a href="">Sub 3 Item 1</a></li>
+<li><a href="">Sub 3 Item 1</a></li>
+<li><a href="">Sub 3 Item 1</a></li>
+<li><a href="">Sub 3 Item 1</a></li>
+</ul>
+</li>
+
+</ul>
+
+<div id="clearmenu" style="clear: left"></div>
+
+<p style="font: normal 11px Arial">This free script provided by<br />
+<a href="http://www.javascriptkit.com">JavaScript Kit</a></p>
+
+</BODY>
+</HTML>

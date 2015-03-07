@@ -1,0 +1,135 @@
+/*---- Layout ----*/
+div
+{
+	/* this is for netscape 4's sake */
+	padding: 0;
+	margin: 0;
+}
+body
+{
+	padding: 20px;
+	margin: 0;
+}
+#oldbrowser
+{
+	text-align: center;
+}
+#masthead h1
+{
+	display: inline;
+}
+#leftcolumn
+{
+	margin-right: -200px;	/* IE 4 fix */
+}
+#leftColumn
+{
+	float: left;
+	width: 200px;
+	/*/*/ /*/margin: 0 0 0 2px; /* Silly Netscape hack to get the borders to line up */
+}
+#contentColumn
+{
+	width: auto;
+	margin-left: 199px;
+}
+#masthead, #innerLeftColumn, #innerContentColumn, #innerFooter
+{
+	padding: 10px;
+}
+#footer
+{
+	clear: left;
+}
+#innerFooter
+{
+	text-align: center;
+}
+#innerContentColumn
+{
+	overflow: visible;
+	height: 100%;	/* fix the Win32 IE float bug */
+}
+#contentColumn>#innerContentColumn
+{
+	height: auto;	/* fix Opera 5 which breaks with the above IE fix */
+}
+#innercontentcolumn
+{
+	height: 100%;	/* fix IE 5.0 which parse the Opera fix, note the selector is all lower case */
+}
+#masthead, #footer
+{
+	z-index: 10;
+}
+
+/*---- Borders ----*/
+#pageFrame
+{
+	border: solid 1px #000;
+}
+#footer, #masthead, #innerLeftColumn, #contentColumn, .hnav
+{
+	border: solid 0px #000;
+}
+#footer
+{
+	border-top-width: 1px;
+}
+#masthead, .hnav
+{
+	border-bottom-width: 1px;
+}
+#innerLeftColumn
+{
+	border-right-width: 1px;
+}
+#contentColumn
+{
+	border-left-width: 1px;
+}
+
+/*---- Visual Elements ----*/
+body
+{
+	background-color: #ddd;
+	color: #000;
+	padding: 20px;
+	margin: 0;
+}
+#pageFrame
+{
+	background-color: #fff;
+	color: #000;
+	min-width: 500px;
+}
+.hide
+{
+	display: none;
+}
+
+/*---- Simple Horizontal Navigation for IE 4/5.0/NS4 ----*/
+.hnav
+{
+	white-space: nowrap;
+	margin: 0;
+	color: #000;
+}
+.hnav
+{
+	padding: 3px 0 4px 0;
+}
+.hnav ul
+{
+	text-align: center;
+	list-style-type: none;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+}
+.hnav ul li
+{
+	display: inline;
+	white-space: nowrap;
+	/*/*/ /*/display: none;/*  */
+}

@@ -1,0 +1,52 @@
+@CHARSET "windows-1255";
+
+
+body,
+	html {
+		margin:0;
+		padding:0;
+		color:#000;
+		background:#a7a09a;
+	}
+	#wrap {
+		width:100%;
+		margin:0 auto;
+		background:#99c;
+	}
+	#header {
+		
+    	padding:5px 10px;
+		background:#ddd;
+	}
+	h1 {
+	    margin:0;
+    }
+
+	#main {
+		position: absolute;
+		float:right;
+		right: 0;
+		width:100%;
+		height: 100%;
+		padding:5px;
+		background:#9c9;
+		border: 1px thin;
+	}
+	h2 {
+		margin:0 0 1em;
+	}
+	#sidebar {
+		position: absolute;
+		float: left;
+		left: 0;
+		top: 0;
+		position: 0;
+		width:100%;
+		height: 100%;
+		padding:5px;
+		background:#99c;
+	}
+	
+#top {
+	position: relative;	
+    }

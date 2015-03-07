@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+<script type="text/html" id='usageList'>
+<table cellspacing='0' cellpadding='0' border='1' >
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <% 	console.log("len = " + emps.employees.length);
+			
+			for (var i=0; i < emps.employees.length; ++i) {
+				emp = emps.employees[i];
+				console.log("emp = " + emp.firstName);
+		%>
+            <tr>
+                <!-- use variables -->
+                <td> <%= emp.firstName %></td>
+				<td> <%= emp.lastName %></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+</script>
+</head>
+<body>
+
+<h1>Some example</h1>
+<div id="placeholder"> 
+
+</div>
+
+<h2>table</h2>
+<div id="target"> 
+
+</div>
+
+
+<script type="text/javascript">
+var compiled = _.template("<p>hello: <%= name %>");
+var txt = compiled({name : 'moe'});
+$("#placeholder").html(txt);
+
+var txt = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+var emps = JSON.parse(txt);
+console.log(emps);
+var template = $("#usageList").html();
+$("#target").html(_.template(template,{emps:emps}));
+
+
+</script>
+
+
+
+</body>
+</html>

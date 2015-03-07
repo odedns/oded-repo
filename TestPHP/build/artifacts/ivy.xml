@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="1.0">
+    <info organisation="com.sap" module="saptube_search_ext" branch="MONSOON-SAPTUBETRUNK" revision="20120103130630" status="integration" publication="20120103130630">
+	</info>
+    <configurations>
+        <conf name="private-lib" visibility="private" description="Libraries that are included in WEB-INF/lib"/>
+        <conf name="compile" visibility="public" description="Needed for compilation"/>
+        <conf name="assembly" visibility="public" description="Everything that needs to be packaged into an assembly"/>	
+		<conf name="test"/>		
+    </configurations>
+	<publications>
+		<artifact name="testphp" conf="assembly" type="zip" ext="zip"/>
+	</publications>
+		
+	
+</ivy-module>

@@ -1,0 +1,45 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="routes.js"></script>
+
+</head>
+<body>
+
+<h1> routes example</h1>
+
+<ul>
+<li>
+<a href="#/options">Options</a>
+</li>
+<li>
+<a href="#/about">About</a>
+</li>
+<li>
+<a href="#/menu">Menu</a>
+
+</li>
+
+</ul>
+<div id="content">
+
+</div>
+
+<script type="text/javascript">
+
+router.add("/options", function() {
+		console.log("options callback");
+});
+router.add("/about", function() {
+	console.log("about callback");
+});
+
+</script>
+
+
+
+</body>
+</html>

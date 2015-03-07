@@ -1,0 +1,12 @@
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/SampleWebApp-1.0/WEB-INF/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-user/2.6.0/gwt-user-2.6.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/gwtbootstrap3/gwtbootstrap3/0.8-SNAPSHOT/gwtbootstrap3-0.8-SNAPSHOT.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/gwtbootstrap3/gwtbootstrap3-extras/0.8-SNAPSHOT/gwtbootstrap3-extras-0.8-SNAPSHOT.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/json/json/20090211/json-20090211.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+</classpath>

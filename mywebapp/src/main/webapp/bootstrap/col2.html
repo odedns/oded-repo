@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+<head>
+
+   <meta charset="utf-8">
+         <title>Getting started with Bootstrap</title>
+         <link rel="stylesheet" href="assets/css/bootstrap.css">
+         <link rel="stylesheet" href="assets/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="assets/css/docs.css">
+         
+          <style>
+ 	         
+			 body, html, .container-fluid {
+ 				 height: 100%;
+			 }
+          	 .fill {          	 	
+          	 	min-height: 100%;        
+          	 	height: 100%  	 	
+          	 }
+             header { background: gray }
+             .content {
+             background: red; 
+             	height: 100%;
+             	min-height: 100%;
+             	
+             }
+             .sidebar {
+             background: cyan;
+             	height: 500px; 
+             }
+            footer { background: cyan; }
+        </style>
+</head>
+<body>
+
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+    	<div class="container">
+      		<ul class="nav">
+  				<li class="active">
+    				<a href="#">Home</a>
+  				</li>
+  				<li><a href="#">Link</a></li>
+  				<li><a href="#">Link</a></li>
+			</ul>
+   		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div class="container-fluid fill">
+  <div class="row-fluid">
+    <div class="span4 sidebar ">
+      <!--Sidebar content-->
+      <p>sidebar
+ 
+    </div>
+    <div class="span8 content">
+      <!--Body content-->
+      <p>content
+    </div>
+  </div>
+
+ 
+
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>    
+</body>
+</html>

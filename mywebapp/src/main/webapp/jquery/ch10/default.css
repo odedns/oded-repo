@@ -1,0 +1,19 @@
+body { 
+  font: 62.5% Arial, Verdana, sans-serif; 
+} 
+
+#container {
+  padding: 20px 60px 100px;
+}
+h1 { 
+  font-size: 2.5em; 
+  margin-bottom: 1em; 
+} 
+h2 { 
+  font-size: 1.3em; 
+  margin-bottom: .5em; 
+} 
+h3 { 
+  font-size: 1.1em; 
+  margin-bottom: 0; 
+} 

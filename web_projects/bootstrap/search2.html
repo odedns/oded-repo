@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+	   <link type="text/css" href="dist/jquery-ui/jquery-ui.css" rel="stylesheet" />	
+	    <script src="dist/js/jquery-2.1.1.min.js"></script>
+		<script src="dist/jquery-ui/jquery-ui.js"></script>
+		
+ 
+    
+    <script lang="text/javascript">
+    $(function(){
+	//Autocomplete
+	$("#tableDiv").hide();
+	$("#autocomplete").autocomplete({
+		source: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"]
+	});
+    /*	
+	$("#autocomplete2").autocomplete({
+		source: "http://localhost:8080/TestWeb/bootstrap/a.json",
+		minlength: 2
+	});
+    */
+    $("#autocomplete2").autocomplete({
+		source: function(request,response){
+			var url = "a.json"
+			var newData;
+			console.log("term = " + request.term);
+			$.ajax({url:url,datatype: "json"}).done( function(data) {
+	   			console.log("success data = " + data);
+   				newData = $.grep(data,function(elem,index) {
+	   							return(elem.label.search(new RegExp(request.term,"i")) > -1);			
+	   					});
+   				console.log("newdata = " + newData.toString());
+   				response(newData);
+	   			
+				
+			}).fail(function(textStatus,errorThrown){
+				console.log("failed.. error=" + errorThrown);
+			});
+			
+		},
+		minlength: 2
+	});
+	
+	 $("#submitButton").on('click',function(event) {
+			console.log("button pressed");
+			$("#tableDiv").show();
+			var term = $("#search").val();
+			console.log("term = " + term);
+			var url = "a.json"
+			var newData;
+			
+			$.ajax({url:url,datatype: "json"}).done( function(data) {
+	   			console.log("success data = " + data);
+	   			if(term != "") {
+	   				newData = $.grep(data,function(elem,index) {
+	   							return(elem.label.search(new RegExp(term,"i")) > -1);			
+	   					});		
+	   			} else {
+	   				newData = data;
+	   			}
+	   			
+				for(i=0; i < newData.length; ++i) {
+					console.log("label= " + newData[i].label);		
+					$("#tbl tr:last").after("<tr><td>"+ newData[i].label + "</td><td>" + newData[i].value + "</td></tr>");
+				}
+			}).fail(function(textStatus,errorThrown){
+				console.log("failed.. error=" + errorThrown);
+			});
+		});
+	
+	});
+   
+    
+    </script>
+  </head>
+
+</head>
+<body>
+
+
+<input type="text" id="search"/>
+<label for="search"/>
+<button type="submit" id="submitButton">Submit</button>
+
+
+<div>
+	<input id="autocomplete" style="z-index: 100; position: relative" title="type &quot;a&quot;" />
+</div>
+		
+		<div>
+			<input id="autocomplete2" style="z-index: 100; position: relative" title="type &quot;a&quot;" />
+		</div>
+		
+	<div id="tableDiv">
+		<table id="tbl">
+			<tr>
+				<th>Label</th>
+				<th>Value</th>
+			</tr>
+		
+		</table>	
+	
+	</div>
+
+</body>
+</html>

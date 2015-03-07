@@ -1,0 +1,44 @@
+body
+{
+	background-color: #665;	/* border/edge of the layout color */
+}
+#pageFrame, #masthead, #footer
+{	
+	background-color: #fff;	/* major background color */
+}
+#pageFrame
+{
+	/* image used as background color for left column ( #E9E8CA ) */
+	background: #fff url('/etribou/layouts/2col_footer/lightyellow.gif') repeat-y 0 0;
+}
+#masthead, #footer
+{
+	background-color: #885;
+	color: #fff;
+}
+#footer
+{
+	border-bottom: solid 1px #997; /* IE 6 has the footer flow over the pageFrame's 
+									  bottom border. if this border is added, IE draws
+									  the pageFrame border as exptected */
+}
+.hnav, .hnav ul li a
+{
+	background-color: #cc9;
+	color: #336;
+}
+.hnav ul li a:hover
+{
+	background-color: #336;
+	color: #fff;
+}
+.vnav ul li a
+{
+	color: #336;
+	background-color: #cc9;
+}
+.vnav ul li a:hover
+{
+	background-color: #336;
+	color: #fff;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html >
+<head>
+
+   <meta charset="utf-8">
+         <title>Getting started with Bootstrap</title>
+         <link rel="stylesheet" href="bootstrap.css">
+         <link rel="stylesheet" href="bootstrap-responsive.css">
+           <link rel="stylesheet" href="docs.css">
+         
+          <style>
+             header { background: gray }
+            .container { background: white; }
+            footer { background: cyan; }
+        </style>
+</head>
+<body>
+<header>
+        <hgroup>
+            <h1>Header in h1</h1>
+            <h2>Subheader in h2</h2>
+        </hgroup>
+    </header>
+    
+    <div class="container">
+    <pre>
+     String filter = "(&(objectclass=user)(samAccountName=i070659))";
+
+    NamingEnumeration results = dctx.search(base, filter, sc);
+    while (results.hasMore()) {
+      SearchResult sr = (SearchResult) results.next();
+      Attributes attrs = sr.getAttributes();
+
+      Attribute attr = attrs.get("cn");
+      out.print(attr.get() + ": ");
+      attr = attrs.get("mail");
+      out.println(attr.get());
+    }
+    dctx.close();
+    </pre>
+    
+     <table class="table table-bordered">
+      <tr class="success">
+        <th>Hero</th>
+        <th>Power</th>
+        <th>Nemesis</th>
+      </tr>
+    
+      <tr class="info">
+        <td>The XMLator</td>
+        <td>Standards compliance</td>
+        <td>Sloppy Code Boy</td>
+      </tr>
+    
+      <tr>
+        <td>Captain CSS</td>
+        <td>Superlayout</td>
+        <td>Lord Deprecated</td>
+      </tr>
+    
+      <tr>
+        <td>Browser Woman</td>
+        <td>Megacompatibility</td>
+        <td>Ugly Code Monster</td>
+      </tr>
+    
+    </table>
+    
+      
+            <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+<a href="#" class="btn btn-large disabled">Link</a>
+            
+         
+     </div>
+        
+ <footer>Footer - Copyright 2013</footer>
+</body>
+</html>

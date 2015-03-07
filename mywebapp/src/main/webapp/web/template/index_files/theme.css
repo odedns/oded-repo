@@ -1,0 +1,63 @@
+/*
+	NS4 doesn't do well with added colors because of the extra padding added inside each
+	block element. So colors are imported. This theme file will, thus, contain mostly
+	font stuff.
+ */
+@import "colors.css";
+
+/*** Left Column ***/
+#innerLeftColumn p
+{
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 70%;
+	line-height: 140%;
+	/*/*/ /*/line-height: normal;/* NS4 Adds too much space, so reset the line-height */
+}
+#innerLeftColumn h3
+{
+	color: #006;
+	margin: 1em 0 0 0;
+}
+
+/*** Content ***/
+#innerContentColumn
+{
+	font-family: Georgia, "Times New Roman", serif;
+}
+#innerContentColumn h3
+{
+	color: #009;
+}
+
+/*** Masthead ***/
+#masthead h1
+{
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+/*** Footer ***/
+#innerFooter
+{
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+/*** Horizontal Navigation Area ***/
+.hnav
+{
+	font-family: verdana, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 70%;
+}
+
+/*** Vertical Navigation Area ***/
+.vnav
+{
+	font-family: verdana, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 70%;
+	line-height: 180%; /* Mozilla suffers from a rounding problem, 
+						  this value may have to be tweaked if you 
+						  change the font family or size 
+						*/
+	/*/*/ /*/line-height: 120%;/* NS4 Adds too much space, so lower it */
+}

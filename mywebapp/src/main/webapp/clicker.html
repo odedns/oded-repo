@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function func(){
+	var ch = String.fromCharCode(event.charCode);
+	console.log("key pressed: " + ch);
+	var txt = document.getElementById('inp');
+	console.log("text = " + txt.value);
+	var out = document.getElementById('out');
+	out.innerHTML = txt.value + ch;
+	
+}
+</script>
+
+<h1> Click test</h1>
+
+<input id="inp" type="text" onkeyup="func();"/>
+<div id="out"></div>
+</body>
+</html>

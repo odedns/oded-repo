@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>	
+	<index><name>alias</name></index>
+	<document>
+		<key>doc key</key>
+		<contentUrl>url</contentUrl>
+		<content>content to be indexed</content>
+		<binaryEncoded>false</binaryEncoded>
+             <textEncoded>false</textEncoded>
+             <utf8Encoded>false</utf8Encoded>
+		<url>url</url>
+		<lang>lang</lang>
+		<attributes>
+			<attribute>
+				<name>attr name1</name>
+				<type>STRING</type>
+				<binaryEncoded>false</binaryEncoded>
+                <utf8Encoded>false</utf8Encoded>
+   		        <values>		
+			    	<value>attr val1</value>
+			    	<value>attr val2</value>	
+                </values>
+			</attribute>
+			<attribute>
+				<name>attr name2</name>
+				<type>STRING</type>
+				<binaryEncoded>false</binaryEncoded>
+                <utf8Encoded>false</utf8Encoded>
+   		        <values>		
+			    	<value>attr val1</value>
+                </values>
+			</attribute>
+			...
+		</attributes>
+		<idmprincipals> 
+			<idmprincipal>
+            	<id>id1</id>
+                <principaltype>LOCAL</principaltype>
+            </idmprincipal>
+			<idmprincipal>
+            	<id>id2</id>
+                <principaltype>LOCAL</principaltype>
+            </idmprincipal>
+			<idmprincipal>
+            	<id>id3</id>
+                <principaltype>LDAP</principaltype>
+            </idmprincipal>
+			..				
+		</idmprincipals>					
+	</document>
+	...
+</documents>				

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type"
+	content="text/html; charset=windows-1255">
+<META name="GENERATOR" content="IBM Software Development Platform">
+<META http-equiv="Content-Style-Type" content="text/css">
+<LINK href="../theme/Master.css" rel="stylesheet" type="text/css">
+<TITLE>Tables.html</TITLE>
+</HEAD>
+
+<SCRIPT language=JavaScript src="myjs.js">
+</SCRIPT>
+
+
+
+
+<BODY>
+<H2>Here are some Table Examples.</H2>
+
+<TABLE border="1">
+	<TBODY>
+		<TR>
+			<TD width="58">Id</TD>
+			<TD width="92">Name</TD>
+			<TD width="63">Count</TD>
+			<TD width="268">Description </TD>
+		</TR>
+		<TR>
+			<TD width="58">1</TD>
+			<TD width="92">First`</TD>
+			<TD width="63">100</TD>
+			<TD width="268">The first Item</TD>
+		</TR>
+		<TR>
+			<TD width="58">2</TD>
+			<TD width="92">Second</TD>
+			<TD width="63">221</TD>
+			<TD width="268">The first Item</TD>
+		</TR>
+		<TR>
+			<TD width="58">3</TD>
+			<TD width="92">Third</TD>
+			<TD width="63">312</TD>
+			<TD width="268">The third Item</TD>
+		</TR>
+		<TR>
+			<TD width="58">4</TD>
+			<TD width="92">Forth</TD>
+			<TD width="63">454</TD>
+			<TD width="268">The forth Item</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<FORM action="/myweb/servlet/SnoopServlet">
+<INPUT type="hidden" name="operation" value="empty" > 
+<INPUT type="button" name="Save" value="Save" onclick="submitForm(this.form,'save');" >
+<INPUT type="button" name="Cancel" value="Cancel" onclick="submitForm(this.form,'cancel');">
+</FORM>
+
+<H3> This is a List to List example</H3>
+
+<TABLE>
+<FORM name=listForm action="/myweb/servlet/SnoopServlet">
+<TR>
+<TD>
+<SELECT size="5" name="leftBox" style="width: 150px" >
+	<OPTION value="1">One</OPTION>
+	<OPTION value="2">Two</OPTION>
+	<OPTION value="3">Three</OPTION>
+	<OPTION value="4">Four</OPTION>
+	<OPTION value="5">Five</OPTION>
+</SELECT>
+</TD>
+<TD>
+<TABLE>
+<TR>
+<INPUT type="button" name="left" value="-->" onClick="moveList(leftBox,rightBox);">
+</TR>
+<TR>
+<INPUT type="button" name="right" value="<--"  onClick="moveList(rightBox,leftBox);">
+</TR>
+</TABLE>
+</TD>
+<TD>
+<SELECT size="5" name="rightBox"  style="width: 150px">
+	
+</SELECT>
+</TD>
+</TR>
+<TR>
+<TD>
+<INPUT type="submit" name="Submit" value="Submit" >
+</TD>
+</TR>
+</FORM>
+</TABLE>
+</BODY>
+</HTML>

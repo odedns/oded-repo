@@ -1,0 +1,23 @@
+body { 
+  font: 62.5% Arial, Verdana, sans-serif; 
+} 
+
+p {
+  font-size: 1.1em;
+}
+
+ul#array-contents {
+  margin: 0.2em 0.2em 0.2em 2.2em;
+  padding: 0.2em 0.2em 0.2em 1.8em;
+  border: 1px solid #eee;
+}
+ul#array-contents li {
+  margin: 0;
+  padding: 0;
+}
+
+div#array-sum {
+  margin: 0.2em 0.2em 0.2em 2.2em;
+  padding: 0.2em;
+  border: 1px solid #eee;
+}

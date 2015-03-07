@@ -1,0 +1,19 @@
+body { 
+  font: 62.5% Arial, Verdana, sans-serif; 
+} 
+
+div {
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #888;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #eee;
+  float: left;
+  clear: left;
+}
+
+.highlight {
+  background-color: #000;
+  color: #fff;
+}

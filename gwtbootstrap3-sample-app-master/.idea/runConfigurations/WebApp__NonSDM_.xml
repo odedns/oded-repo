@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WebApp (NonSDM)" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+    <module name="gwtbootstrap3-sample-app" />
+    <option name="VM_PARAMETERS" value="-Xmx1024m -XX:MaxPermSize=512m" />
+    <option name="RUN_PAGE" value="SampleWebApp.html" />
+    <option name="GWT_MODULE" value="org.gwtbootstrap3.sample.SampleWebApp" />
+    <option name="OPEN_IN_BROWSER" value="false" />
+    <option name="BROWSER" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+    <option name="UPDATE_RESOURCES_ON_FRAME_DEACTIVATION" value="true" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="" />
+      <option name="TRANSPORT" value="0" />
+      <option name="LOCAL" value="true" />
+    </RunnerSettings>
+    <ConfigurationWrapper RunnerId="Debug" />
+    <method />
+  </configuration>
+</component>

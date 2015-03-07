@@ -1,0 +1,258 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	background-color: #d4dde6;
+	color: #315075;
+	height: 100%;
+	width: 100%;
+	font-size: 8pt;
+}
+
+img {
+	display: inline;
+}
+
+iframe {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+
+/* use to set some scroll bars on a page */
+#scroll_bars {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+table {
+	border: none;
+	padding: 0pt;
+	border-spacing: 0pt;
+	font-size: 8pt;
+}
+
+button,input.btn {
+	border-top:1px solid #FFFFFF;
+    border-right:1px solid #315075;
+    border-bottom:1px solid #315075;
+    border-left:1px solid #FFFFFF;
+	background-color: #C8D1DA;
+	color: #315075;
+	height: 15pt;
+	font-size: 8pt;
+	text-align: center;
+	vertical-align: middle;
+	width: 50pt;
+}
+
+iframe.simple {
+	margin: 0pt;
+	padding: 0pt;
+	border-width: 0pt;
+	border: none;
+}
+
+table.T3DTable {
+	width: 100%;
+    border-right:1px solid #315075;
+    border-bottom:1px solid #315075;
+    border-left:1px solid #FFFFFF;
+	border-top: none;
+    border-collapse: separate;
+	border-spacing: 5pt;
+	background-color: #d4dde6;
+	height: 100%;
+}
+
+td.T3DTd,th.T3DTd,div.T3DDiv {
+	border-top:1px solid #FFFFFF;
+    border-right:1px solid #315075;
+    border-bottom:1px solid #315075;
+    border-left:1px solid #FFFFFF;
+	vertical-align: top;
+}
+
+.rectTitle,.FAB_VIEW_TITLE {
+	background-color: #a3aec0;
+	width: 100%;
+	height: 15pt;
+	padding: 0pt;
+	margin: 0pt;
+	color: #FFFFFF;
+	font-size: 9pt;
+	padding-left: 4pt;
+}
+
+.FAB_VIEW_TITLE {
+	background-color: #7a9dbc;
+	vertical-align: middle;
+	font-weight: bold;
+	padding-top: 2px;
+}
+
+span.data {
+	color: #000000;
+}
+
+select,.input_text {
+	font-size: 8pt;
+	border: 1px solid #8ba9c4;
+	color: #000000;
+	cursor: default;
+	background-color: #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+}
+
+.div_list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	display: block;
+	visibility: hidden;
+	background-color: #FFFFFF;
+	border: 1px inset #000000;
+	height: 100pt;
+	vertical-align: middle;
+}
+
+tr.listselected {
+	overflow: auto;
+	display: block;
+	color: #000000;
+	background-color: #ffffad;
+}
+
+tr.listnotselected {
+	overflow: auto;
+	display: block;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: solid;
+}
+
+.select_selected {
+	background-color: #0a246a;
+	color: #FFFFFF;
+	width: 100%;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: default;
+}
+
+.select_unselected {
+	background-color: #FFFFFF;
+	color: #000000;
+	width: 100%;
+	white-space: nowrap;
+	cursor: default;
+}
+
+table.numOfGraph {
+	background-color: #FFFFFF;
+	width: 50pt;
+	padding-left: 2pt;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	color: #315075;
+	padding-top: 0pt;
+}
+
+td.A-numOfGraph,td.B-numOfGraph {
+	border: inset 1px green;
+	border-right-style: none;
+	border-left-style: none;
+	border-top-style: none;
+	padding-bottom: 5pt;
+	text-align: center;
+	color: #315075;
+}
+
+td.B-numOfGraph {
+	padding-bottom: 0pt;
+	border-bottom-style: none;
+	padding-top: 5pt;
+}
+
+td.graphCell {
+	border: inset 1px #315075;
+	height: 5pt;
+}
+
+td.verticalSeparator {
+	border-right-style: inset;
+	border-color: #FFFFFF;
+	border-right-width: 2px;
+	padding-right: 10px;
+}
+
+td.horizontalSeparator,td.horizontalSeparatorSpace {
+	height: 5px;
+	font-size: 5px;
+}
+
+td.horizontalSeparator {
+	border-bottom-style: inset;
+	border-color: #FFFFFF;
+	border-bottom-width: 2px;
+}
+
+td.annotation {
+	border: 2px inset #d4dde6;
+	border-top-style: none;
+	border-left-style: none;
+}
+
+input.annotation {
+	height: 23pt;
+	background-color: #d4dde6;
+}
+
+td.Filter {
+	height: 20pt;
+}
+
+td.tableData {
+	background: #FFFFFF;
+}
+
+thead.fixHeader td {
+	position: relative;
+	background: #dee3ef;
+	text-align: left;
+	color: #39557b;
+	border-top:1px solid #FFFFFF;
+    border-right:1px solid #315075;
+    border-bottom:1px solid #315075;
+    border-left:1px solid #FFFFFF;
+	background-position: right;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+}
+
+td.tableheader {
+	background: #dee3ef;
+	text-align: center;
+	color: #39557b;
+	border-top:1px solid #FFFFFF;
+    border-right:1px solid #315075;
+    border-bottom:1px solid #315075;
+    border-left:1px solid #FFFFFF;
+}
+
+span.label {
+	color: #315075;
+	font-size: 9pt;
+	writing-mode:tb-rl;
+	padding-top: 5pt;
+	font-weight: bolder;
+}

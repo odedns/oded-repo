@@ -1,0 +1,67 @@
+<HTML>
+    <HEAD>
+        <TITLE>iWeb, Inc.  DHTML Tabset Instructions</TITLE>
+
+    </HEAD>
+
+
+    <BODY bgcolor="#efefef" link="navy" vlink="navy">
+     
+    <TABLE WIDTH=600 ALIGN="CENTER">
+    <TR><TD>
+       <FONT FACE="tahoma,verdana,arial,helvetica" SIZE=-1>
+       <H2>DHTML Tabset Component.</H2>
+
+       <OL>
+       <LI>Place the following lines in the <B>&lt;HEAD&gt;</B> of your HTML Document, changing the 
+           virtual path names to the files to match those of your server, as needed:
+       <FONT FACE="courier" SIZE=+1>
+       <PRE>        
+        &lt;LINK REL="stylesheet" HREF="tabs.css"&gt;
+        &lt;script language="JavaScript" SRC="tabs.js"&gt;&lt;/script&gt;
+        &lt;script language="JavaScript" SRC="tabs_definition.js"&gt;&lt;/script&gt;
+        &lt;script language="javascript"&gt; DrawTabs(); &lt;/script&gt;
+       </PRE>
+       </FONT>
+
+
+       <LI>Edit the "tabs_definition.js" file to set your color preferences, number of tabs, etc.
+           <P>
+
+       <LI>Edit the "tabs.css" to further define colors, widths, etc.
+           <P>
+
+       <LI>Create correctly identified <B>&lt;DIV&gt;</B> tags within your HTML document
+           to correspond to the tabs you defined in step 2.  Instuctions and examples for these
+           can be found in the tabs_definition.js file, as well as in the example.html file included
+           within this distribution.  Any HTML that you like can be included in these tags.
+           <P>
+
+       <LI>Place this tag at the <B>BOTTOM</B> of your HTML document, after the <B>&lt;BODY&gt;</B> tag
+       <FONT FACE="courier" SIZE=+1>
+       <PRE>
+         &lt;script language="JavaScript" SRC="tabs_bottom.js"&gt;&lt;/script&gt;
+       </PRE>
+       </FONT>
+
+       </OL>
+
+       <BR><BR>
+
+       <CENTER>
+          <H3><A HREF="example.html">View the Example</A></H3>
+
+          <B>Copyright &copy; 2001, <A HREF="http://www.iwebsoftware.com">iWeb Software, Inc.</A></B>
+
+       </CENTER>
+
+       </FONT>
+
+     </TD></TR>
+     </TABLE>
+                  
+    </BODY>
+
+
+</HTML>
+    

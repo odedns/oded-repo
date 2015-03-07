@@ -1,0 +1,171 @@
+ho<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+
+<META http-equiv="Content-Type"
+	content="text/html; charset=windows-1255">
+<META name="GENERATOR" content="IBM Software Development Platform">
+<META http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+
+.selectOff {color: maroon; background: white;}
+.selectOn {color: white; background: darkblue; }
+
+#csstopmenu, #csstopmenu ul{
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#csstopmenu li{
+float: left;
+position: relative;
+}
+
+#csstopmenu a{
+text-decoration: none;
+}
+
+.mainitems{
+border: 1px solid black;
+border-left-width: 0;
+background-color: #D8FE89;
+}
+
+.headerlinks a{
+margin: auto 8px;
+font-weight: bold;
+color: black;
+}
+
+.submenus{
+display: none;
+width: 10em;
+position: absolute;
+top: 1.2em;
+left: 0;
+background-color: #EEFFCC;
+border: 1px solid black;
+}
+
+.submenus li{
+width: 100%;
+}
+
+.submenus li a{
+display: block;
+width: 100%;
+text-indent: 3px;
+}
+
+html>body .submenus li a{ /* non IE browsers */
+width: auto;
+}
+
+.submenus li a:hover{
+background-color: yellow;
+color: black;
+}
+
+#csstopmenu li>ul {/* non IE browsers */
+top: auto;
+left: auto;
+}
+
+#csstopmenu li:hover ul, li.over ul {
+display: block;
+}
+
+html>body #clearmenu{ /* non IE browsers */
+height: 3px;
+}
+
+
+
+--></style>
+
+<TITLE>menu.html</TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT language=JavaScript >
+
+var oldId = "";
+function changeBg(elem)
+{
+	var row = document.getElementById(elem);
+	if(oldId != "") {
+		oldId.className="selectOff";
+	}
+	oldId = row;
+	row.className="selectOn";
+	document.forms.details.rowName.value=elem;
+}
+</SCRIPT>
+
+
+<P>This is a sample menu</P>
+
+<ul id="menu" class="mainitems">
+	<li>
+		<div> File </div>
+		<ul id="menuItem" class="submenus">
+			<li> Open </li>
+			<li> Save </li>
+			<li> Close</li>
+			<li> Exit</li>
+		</ul>
+
+	</li>
+
+</ul>
+
+<div>
+
+<H2>Here is a Table Menu Example</H2>
+
+<TABLE border="1">
+	<TBODY>
+		<TR>
+			<TD width="58">Id</TD>
+			<TD width="92">Name</TD>
+			<TD width="63">Count</TD>
+			<TD width="268">Description </TD>
+		</TR>
+		<TR id="tr1" class="selectOff" onclick="changeBg('tr1');"  >
+			<TD width="58">1</TD>
+			<TD width="92">First`</TD>
+			<TD width="63">100</TD>
+			<TD width="268">The first Item</TD>
+		</TR>
+		<TR id="tr2" class="selectOff" onclick="changeBg('tr2');">
+			<TD width="58">2</TD>
+			<TD width="92">Second</TD>
+			<TD width="63">221</TD>
+			<TD width="268">The first Item</TD>
+		</TR>
+		<TR id="tr3" class="selectOff" onclick="changeBg('tr3')";>
+			<TD width="58">3</TD>
+			<TD width="92">Third</TD>
+			<TD width="63">312</TD>
+			<TD width="268">The third Item</TD>
+		</TR>
+		<TR id="tr4" class="selectOff" onclick="changeBg('tr4')";>
+			<TD width="58">4</TD>
+			<TD width="92">Forth</TD>
+			<TD width="63">454</TD>
+			<TD width="268">The forth Item</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+</div>
+
+<div>
+
+<Form name="details" >
+
+Name: <INPUT type="text" id="rowName" />
+
+</Form>
+</BODY>
+</HTML>

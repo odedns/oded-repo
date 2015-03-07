@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+<h1>Some example</h1>
+<div id="target"> 
+
+</div>
+
+<script type="text/html" id='usageList'>
+<table cellspacing='0' cellpadding='0' border='1' >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <% _.each(items,function(item,key,list){ %>
+        <% var f = item.name; %><!-- create more variables -->
+            <tr>
+                <!-- use variables -->
+                <td><%= key %></td>
+                <td class="<%= f %>"><%= item.name %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+</script>
+
+
+<script type="text/javascript">
+    var items = [
+        {name:"Alexander"},
+        {name:"Barklay"},
+        {name:"Chester"},
+        {name:"Domingo"},
+        {name:"Edward"},
+        {name:"..."},
+        {name:"Yolando"},
+        {name:"Zachary"}
+    ];
+    var template = $("#usageList").html();
+    $("#target").html(_.template(template,{items:items}));
+</script>
+
+
+</body>
+</html>

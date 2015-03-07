@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type"
+	content="text/html; charset=windows-1255">
+<META name="GENERATOR" content="IBM Software Development Platform">
+<META http-equiv="Content-Style-Type" content="text/css">
+<LINK href="../theme/Master.css" rel="stylesheet" type="text/css">
+<TITLE>form.html</TITLE>
+</HEAD>
+<BODY>
+<H2>This is the forms page.</h2>
+
+<FORM action="/myweb/servlet/SnoopServlet">
+<table>
+<tr>
+<td> Name : </td>
+<td> <INPUT type="text" name="name" size="20">
+</td>
+</tr>
+<tr>
+<td> Choose OS: </td>
+<td>
+		<SELECT name="os">
+			<OPTION value="1" selected>Windows</OPTION>
+			<OPTION value="2">Linux</OPTION>
+			<OPTION value="3">Mac</OPTION>
+		</SELECT>
+</td>
+</tr>	
+<tr> 
+<td> Choose Technologies: <td>
+<tr>
+	<td>&nbsp</td><td> <INPUT type="checkbox" name="j2ee" value="1">J2EE </td>
+</tr>
+<tr>
+	<td>&nbsp</td><td> <INPUT type="checkbox" name="ora" value="1">ORACLE </td>
+</tr>
+<tr>
+	<td>&nbsp</td><td> <INPUT type="checkbox" name="db2" value="1">DB2 </td>
+</tr>
+<tr>
+	<td>&nbsp</td><td> <INPUT type="checkbox" name="was" value="1">WebSphere </td>
+</tr>
+<tr>
+<td>
+Category:
+</td>
+<td><INPUT TYPE="radio" NAME="category" VALUE="liv" CHECKED> Living
+<INPUT TYPE="radio" NAME="category" VALUE="din"> Dining
+<INPUT TYPE="radio" NAME="category" VALUE="bed"> Bedroom</td>
+</tr>
+<tr/>
+<tr>
+<td>What is your favorite ice cream flavor?</td>
+<td>
+<SELECT NAME="ice_cream">
+<OPTION>Rocky Road
+<OPTION>Mint Chocolate Chip
+<OPTION>Pistachio
+<OPTION SELECTED>Vanilla
+<OPTION>Chocolate
+<OPTION VALUE="swirl">Fudge Ripple
+<OPTION>Praline Pecan
+<OPTION>Bubblegum
+</SELECT>
+</td>
+</tr>
+
+<tr>
+	<td> Description: </td>
+</tr>
+<tr>
+	<td>&nbsp</td>
+	<td>
+		<TEXTAREA rows="5" cols="40" name="desc"></TEXTAREA>
+	</td>
+</tr>
+
+
+<tr/>
+<tr>
+	<td>&nbsp</td>	
+<td>
+	<INPUT type="submit" name="Submit" value="Submit">
+	<INPUT type="reset" value="Clear">
+</td>
+</tr>
+</table>
+</FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,102 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1255">
+<title>Insert title here</title>
+<style>
+div
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+#container
+{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+ 
+  padding-bottom:40px;
+  overflow:hidden;
+}
+#header
+{
+  width:100%;
+  height:64px;
+  border: 5px;
+  background-color: green;
+}
+#outer
+{
+  margin:0px auto;
+  width:100%;
+  height:100%;
+}
+#inner
+{
+  margin:0px;
+  min-width:480px;
+  height:100%;
+  background:white;
+  padding:0 0 64px 0;
+  text-align:center;
+}
+#lpane
+{
+  display:inline-block;
+  width:30%;
+  height:100%;
+  margin:0px;
+  min-width:120px;
+  border: 5px;
+  background:white;
+  overflow:hidden;
+  text-align:left;
+  background-color: cyan
+}
+
+#rpane
+{
+  display:inline-block;
+  width:68%;
+  height:100%;
+  margin:0px;
+  min-width:360px;
+  border: 5px;
+  background:white;
+  overflow:hidden;
+  text-align:left;
+  background-color: blue
+}
+#footer
+{
+  height:40px;
+  width: 100%;
+  background-color: yellow;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+  <div id="container">
+  <header id="header">This is the header</header>
+        <div id="lpane">Left panel</div>
+        <div id="rpane">Right panel</div>
+ 		    
+  </div>
+  <div id="footer">This is the footer</div>
+ 		<!-- 
+ 		<footer id="footer">This is the footer</footer>
+ 		-->
+
+
+
+
+</body>
+</html>

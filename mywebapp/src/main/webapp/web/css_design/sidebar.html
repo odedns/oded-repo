@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1255" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+	content="text/html; charset=windows-1255" />
+<meta name="GENERATOR" content="IBM Software Development Platform" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link href="../../theme/Master.css" rel="stylesheet" type="text/css" />
+
+
+<style>
+#sidebar {
+	width: 200px;
+}
+.box {
+	background-color: #f5ece3;
+	border: 2px solid #e1d4c0;
+	padding: 8px;
+}
+
+.box:before {
+	content: url(box-top.gif);
+	display: block;
+	line-height: 0.1;
+	margin: -10px -10px -22px -10px;
+}
+
+.box:after {
+	clear: both;
+	content: url(box-btm.gif);
+	display: block;
+	line-height: 0.1;
+	margin: 0 -10px -10px -10px;
+	
+}	
+
+.box h2{
+	margin-top: 0;
+
+}
+</style>
+<title>sidebar.html</title>
+</head>
+<body>
+
+<h1>A sidebar.</h1>
+
+<div id="sidebar">
+	<div class="box">
+		<h2> This is the sidebar box</h2>
+		<p>Enhancements in J2SE 1.4.1:
+
+    J2SE 1.4.1 is available in versions that support the 64-bit Intel Itanium processor on Linux Red Hat 7.2 and Windows XP 64-bit edition. Look for the downloads for these versions on the J2SE 1.4.1 download page.
+
+      In this release, these 64-bit versions have the following limitations.
+     Applications can be run only in interpreted mode. The platform will run in interpreted mode by default, with no need to supply the -Xint flag on the command line when launching an application. When using the 64-bit versions of the J2SE 1.4.1 platform, the command java MyApp will launch and execute MyApp by interpreting the bytecode. Java HotSpot-technology-based dynamic compilers for 64-bit support is planned for a future release of the J2SE platform.
+     The 64-bit versions of J2SE 1.4.1 do not include the Java Plug-in and Java Web Start products.
+     The 64-bit versions of J2SE 1.4.1 do not have an installer application. These versions are available only as a tar bundle. 
+      The 32-bit versions of the J2SE 1.4.1 will not work on Intel Itanium machines.
+
+    * A deadlock detection utility has been added to the Java HotSpot VM. The utility is invoked by a Ctrl+\ on the command line while an application is running. The utility detects Java-platform-level deadlocks, including locking done from the Java Native Interface (JNI), the Java Virtual Machine Profiler Interface (JVMPI), and Java Virtual Machine Debug Interface (JVMDI).
+
+      When invoked, the utility displays a thread dump to standard out and indicates any Java-platform-level deadlocks it detects. Refer to this sample output. If the application is deadlocked because two or more threads are involved in a cylce to acquire monitors, then the list of such threads and monitors involved in the deadlocks are displayed. Note, however, that this will not find deadlocks involving threads waiting on monitors on which no signal will be forthcoming. 
+
+Enhancements in J2SE 1.4.0: 
+	</div>
+</div>
+</body>
+</html>

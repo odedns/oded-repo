@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.gwtbootstrap3:gwtbootstrap3-extras:0.8-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gwtbootstrap3/gwtbootstrap3-extras/0.8-SNAPSHOT/gwtbootstrap3-extras-0.8-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gwtbootstrap3/gwtbootstrap3-extras/0.8-SNAPSHOT/gwtbootstrap3-extras-0.8-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gwtbootstrap3/gwtbootstrap3-extras/0.8-SNAPSHOT/gwtbootstrap3-extras-0.8-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

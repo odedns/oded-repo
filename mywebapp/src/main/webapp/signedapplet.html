@@ -1,0 +1,53 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<script type="text/javascript">
+
+function fileExists2()
+{
+	var file = "c:/tmp/a.svg";
+	var applet = document.getElementById("signedApplet");
+	alert('got applet');
+	var b = applet.FileExists(file);
+	alert("file exist returns: " + b);
+}
+
+
+function dirExists()
+{
+	var file = "c:/tmp/";
+	var applet = document.getElementById("signedApplet");
+	alert('got applet');
+	var b = applet.FolderExists(file);
+	alert("folder exists returns : " + b);
+}
+
+</script>
+
+<BODY>
+
+<h3> Signed applet</h3>
+
+<form id="myform"> 
+<br><button id="FileExistt" onclick="fileExists2();">FileExists</button>
+<br><button id="FolderExistt" onclick="dirExists();">FolderExists</button>
+<br><input type="text" id="out" name="out" value="some value"/>
+
+</form>
+<applet id="signedApplet" code="applets/SignedAppletDemo.class"
+	archive="signedApplet.jar"
+	width=400 height=400>
+	<param name=file value="c:/tmp/hosts">
+</applet> 
+		
+
+</BODY>
+
+</HTML>

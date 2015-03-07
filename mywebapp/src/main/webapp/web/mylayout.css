@@ -1,0 +1,180 @@
+/*---- Layout ----*/
+div
+{
+	/* this is for netscape 4's sake */
+	padding: 0;
+	margin: 0;
+}
+body
+{
+	padding: 20px;
+	margin: 0;
+}
+#oldbrowser
+{
+	text-align: center;
+}
+#masthead h1
+{
+	display: inline;
+}
+#leftcolumn
+{
+	margin-right: -200px;	/* IE 4 fix */
+}
+#leftColumn
+{
+	float: left;
+	width: 200px;
+	/*/*/ /*/margin: 0 0 0 2px; /* Silly Netscape hack to get the borders to line up */
+}
+#contentColumn
+{
+	width: auto;
+	margin-left: 199px;;
+	padding-left: 5px
+}
+#masthead, #innerLeftColumn, #innerContentColumn, #innerFooter
+{
+	padding: 10px;
+}
+#footer
+{
+	clear: left;
+}
+#innerFooter
+{
+	text-align: center;
+}
+#innerContentColumn
+{
+	overflow: visible;
+	height: 100%;	/* fix the Win32 IE float bug */
+}
+#contentColumn>#innerContentColumn
+{
+	height: auto;	/* fix Opera 5 which breaks with the above IE fix */
+}
+#innercontentcolumn
+{
+	height: 100%;	/* fix IE 5.0 which parse the Opera fix, note the selector is all lower case */
+}
+#masthead, #footer
+{
+	z-index: 10;
+}
+
+/*---- Borders ----*/
+#pageFrame
+{
+	border: solid 1px #000;
+}
+#footer, #masthead, #innerLeftColumn, #contentColumn, .hnav
+{
+	border: solid 0px #000;
+}
+#footer
+{
+	border-top-width: 1px;
+}
+#masthead, .hnav
+{
+	border-bottom-width: 1px;
+}
+#innerLeftColumn
+{
+	border-right-width: 1px;
+}
+#contentColumn
+{
+	border-left-width: 1px;
+}
+
+/*---- Visual Elements ----*/
+body
+{
+	background-color: #ddd;
+	color: #000;
+	padding: 20px;
+	margin: 0;
+}
+#pageFrame
+{
+	background-color: #fff;
+	color: #000;
+	min-width: 500px;
+}
+.hide
+{
+	display: none;
+}
+
+/*---- Simple Horizontal Navigation for IE 4/5.0/NS4 ----*/
+.hnav
+{
+	white-space: nowrap;
+	margin: 0;
+	color: #000;
+}
+.hnav
+{
+	padding: 3px 0 4px 0;
+}
+.hnav ul
+{
+	text-align: center;
+	list-style-type: none;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+}
+.hnav ul li
+{
+	display: inline;
+	white-space: nowrap;
+	/*/*/ /*/display: none;/*  */
+}
+body
+{
+	background-color: #665;	/* border/edge of the layout color */
+}
+#pageFrame, #masthead, #footer
+{	
+	background-color: #fff;	/* major background color */
+}
+#pageFrame
+{
+	/* image used as background color for left column ( #E9E8CA ) */
+	background: #fff url('/etribou/layouts/2col_footer/lightyellow.gif') repeat-y 0 0;
+}
+#masthead, #footer
+{
+	background-color: #885;
+	color: #fff;
+}
+#footer
+{
+	border-bottom: solid 1px #997; /* IE 6 has the footer flow over the pageFrame's 
+									  bottom border. if this border is added, IE draws
+									  the pageFrame border as exptected */
+}
+.hnav, .hnav ul li a
+{
+	background-color: #cc9;
+	color: #336;
+}
+.hnav ul li a:hover
+{
+	background-color: #336;
+	color: #fff;
+}
+.vnav ul li a
+{
+	color: #336;
+	background-color: #cc9;
+}
+.vnav ul li a:hover
+{
+	background-color: #336;
+	color: #fff;
+}

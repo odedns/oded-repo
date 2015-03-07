@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ajax Type Ahead</title>
+
+<style type="text/css" media="screen">
+span.spanTextDropdown{ position: absolute;
+top: 0px;
+left: 0px;
+width: 150px;
+z-index: 101;
+background-color: #C0C0C0;
+border: 1px solid #000000;
+padding-left: 2px;
+overflow: visible;
+display: none;
+}
+
+</style>
+
+</head>
+<script type="text/javascript">
+
+function $(id) { return document.getElementById(id); }
+
+
+
+function getNewXMLHTTP(){
+    var res=false;
+    try {
+       res = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+       try {
+           res = new ActiveXObject("Microsoft.XMLHTTP");
+       } catch (E) {
+       res = false;
+       }
+    }
+    if (!res && typeof XMLHttpRequest!='undefined') {
+       res = new XMLHttpRequest();
+    }
+    return res;
+}
+
+window.onload = function(){
+var elemSpan = document.createElement("span");
+elemSpan.id = "spanOutput";
+elemSpan.className = "spanTextDropdown";
+document.body.appendChild(elemSpan);
+}
+
+function handleInput()
+{
+	alert("handleInput");
+	var span = $("spanOutput");
+	span.innerHTML = "one<br>two<br>three";
+	span.style.display="block";
+
+}
+
+</script>
+
+<body>
+
+<form name="Form1" AUTOCOMPLETE="off" ID="Form1">
+	AutoComplete Text Box: <input type="text" name="txtUserInput" onclick="handleInput()"/>
+	<input type="hidden" name="txtUserValue" ID="hidden1" />
+	<input type="text" name="txtIgnore" style="display:none" />
+</form>
+</body>
+</html>
