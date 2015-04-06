@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
- * @author a73552
+ * @author Oded
  *
  */
 public class SingletonBean {
