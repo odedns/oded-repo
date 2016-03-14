@@ -7,14 +7,14 @@ import com.google.gwt.user.client.rpc.impl.ReflectionHelper;
 
 @SuppressWarnings("deprecation")
 public class XsrfToken_FieldSerializer implements com.google.gwt.user.client.rpc.impl.TypeHandler {
-  private static java.lang.String getToken(com.google.gwt.user.client.rpc.XsrfToken instance) {
-    return (java.lang.String) ReflectionHelper.getField(com.google.gwt.user.client.rpc.XsrfToken.class, instance, "token");
-  }
+  private static native java.lang.String getToken(com.google.gwt.user.client.rpc.XsrfToken instance) /*-{
+    return instance.@com.google.gwt.user.client.rpc.XsrfToken::token;
+  }-*/;
   
-  private static void setToken(com.google.gwt.user.client.rpc.XsrfToken instance, java.lang.String value) 
-  {
-    ReflectionHelper.setField(com.google.gwt.user.client.rpc.XsrfToken.class, instance, "token", value);
-  }
+  private static native void setToken(com.google.gwt.user.client.rpc.XsrfToken instance, java.lang.String value) 
+  /*-{
+    instance.@com.google.gwt.user.client.rpc.XsrfToken::token = value;
+  }-*/;
   
   public static void deserialize(SerializationStreamReader streamReader, com.google.gwt.user.client.rpc.XsrfToken instance) throws SerializationException {
     setToken(instance, streamReader.readString());

@@ -2,7 +2,7 @@ package com.oded.client;
 
 /**
  * Interface to represent the messages contained in resource bundle:
- * 	C:/Users/i070659/git/oded/oded-repo/com.oded.GWeb/src/main/resources/com/oded/client/Messages.properties'.
+ * 	C:/Users/family/git/oded-repo/com.oded.GWeb/src/main/resources/com/oded/client/Messages.properties'.
  */
 public interface Messages extends com.google.gwt.i18n.client.Messages {
   

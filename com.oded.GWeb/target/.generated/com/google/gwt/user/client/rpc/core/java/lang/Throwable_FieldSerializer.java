@@ -7,14 +7,14 @@ import com.google.gwt.user.client.rpc.impl.ReflectionHelper;
 
 @SuppressWarnings("deprecation")
 public class Throwable_FieldSerializer implements com.google.gwt.user.client.rpc.impl.TypeHandler {
-  private static java.lang.String getDetailMessage(java.lang.Throwable instance) {
-    return (java.lang.String) ReflectionHelper.getField(java.lang.Throwable.class, instance, "detailMessage");
-  }
+  private static native java.lang.String getDetailMessage(java.lang.Throwable instance) /*-{
+    return instance.@java.lang.Throwable::detailMessage;
+  }-*/;
   
-  private static void setDetailMessage(java.lang.Throwable instance, java.lang.String value) 
-  {
-    ReflectionHelper.setField(java.lang.Throwable.class, instance, "detailMessage", value);
-  }
+  private static native void setDetailMessage(java.lang.Throwable instance, java.lang.String value) 
+  /*-{
+    instance.@java.lang.Throwable::detailMessage = value;
+  }-*/;
   
   public static void deserialize(SerializationStreamReader streamReader, java.lang.Throwable instance) throws SerializationException {
     setDetailMessage(instance, streamReader.readString());
