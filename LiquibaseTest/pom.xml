@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>test.liquibase</groupId>
+  <artifactId>LiquibaseTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <dependencies>
+  	<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.1-901-1.jdbc4</version>
+	</dependency>
+	
+  	<dependency>
+		<groupId>org.liquibase</groupId>
+		<artifactId>liquibase-core</artifactId>
+		<version>3.4.0</version>
+	</dependency>
+	
+  	<dependency>
+		<groupId>org.liquibase</groupId>
+		<artifactId>liquibase-maven-plugin</artifactId>
+		<version>3.4.0</version>
+	</dependency>
+  	
+  
+  </dependencies>
+  
+  
+     <build>
+     <pluginManagement>
+      <plugins>
+		<plugin>
+		   <groupId>org.liquibase</groupId>
+		   <artifactId>liquibase-maven-plugin</artifactId>
+		   <version>3.4.0</version>
+		   <configuration>                  
+			  <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+			
+		   </configuration>   
+		               
+		   <executions>
+			 <execution>
+			   <phase>process-resources</phase>                                                                  
+			   <goals>
+				 <goal>update</goal>
+			   </goals>
+			 </execution>
+		   </executions>
+		   
+		</plugin> 	
+		  
+		  <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <descriptor>src/assembly/dep.xml</descriptor>
+        </configuration>
+        <executions>
+          <execution>
+            <id>create-archive</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+		
+      </plugins>
+      </pluginManagement>
+    </build>
+</project>
