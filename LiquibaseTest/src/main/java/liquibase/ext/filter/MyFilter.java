@@ -24,8 +24,6 @@ public class MyFilter implements ChangeSetFilter {
 		System.out.println("MyFilter()");
 	}
 
-	
-	@Override
 	public ChangeSetFilterResult accepts(ChangeSet change) {
 		// TODO Auto-generated method stub
 		String id = change.getId();
@@ -35,4 +33,5 @@ public class MyFilter implements ChangeSetFilter {
 		return (result);
 	}
 
+	
 }
