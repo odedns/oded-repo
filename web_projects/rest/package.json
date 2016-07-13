@@ -1,0 +1,10 @@
+{
+    "name": "node-api",
+    "main": "server.js",
+    "dependencies": {
+        "express": "latest",
+        "mongoose": "~3.6.13",
+        "body-parser": "latest",
+        "mysql": "latest"
+    }
+}

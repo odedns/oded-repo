@@ -1,0 +1,6 @@
+set_unless[:deploy][:base_dir]    = "/srv/apps"
+set_unless[:deploy][:release_dir] = "releases"
+set_unless[:deploy][:current_dir] = "current"
+set_unless[:deploy][:force_redeploy] = "false"
+set_unless[:deploy][:remote_repository_url] = "http://build.wdf.sap.corp:8080/bamboo/browse"
+set_unless[:deploy][:webapps_path] = "/monsoon/opt/www"

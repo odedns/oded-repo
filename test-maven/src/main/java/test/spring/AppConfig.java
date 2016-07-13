@@ -12,7 +12,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import test.spring.data.RepoTestBean;
 
 @Configuration
-@PropertySource("classpath:/jdbc.properties" )
+//@PropertySource("classpath:/jdbc.properties" )
 
 
 @EnableJpaRepositories
