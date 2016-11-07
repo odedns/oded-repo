@@ -1,0 +1,94 @@
+/**
+ * 
+ */
+package il.co.fmr.coord.data;
+
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import il.co.fmr.coord.app.FaasException;
+import il.co.fmr.coord.rest.FaasEvent;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+/**
+ * @author oded
+ *
+ */
+
+@Service
+public class EventService {
+
+	@Autowired
+    private JdbcTemplate jdbcTemplate;
+
+	
+	
+	public EventService()
+	{
+		
+	}
+	/**
+	 * 
+	 * @param user
+	 */
+	public void createEvent(FaasEvent event)
+	{
+		String query = "INSERT INTO FAAS_EVENTS (event_id, event_type,data) values ( ? ,?,to_json(?::json) )";
+		String json;
+		try {
+			json = JsonConverter.fromMap(event.getParams());
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+			throw new FaasException();
+		}
+		jdbcTemplate.update(query,event.getEventId(),event.getEventType(),json);
+		
+	}
+	
+	
+	
+	/**
+	 * find an event by id.
+	 * @param id
+	 * @return
+	 */
+	public FaasEvent findById(int id)
+	{
+		String query = "SELECT * FROM FAAS_EVENTS where id=?";
+		
+		FaasEvent event = jdbcTemplate.queryForObject(query, new Object[] {id}, new RowMapper<FaasEvent>() {
+
+			@Override
+			public FaasEvent mapRow(ResultSet rs, int rowNum) throws SQLException {
+				FaasEvent event = new FaasEvent();
+				event.setEventId(rs.getInt("EVENT_ID"));
+				event.setEventType(rs.getString("EVENT_TYPE"));
+				String json = rs.getString("DATA");
+				try {
+					event.setParams(JsonConverter.toMap(json));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					throw new FaasException();
+				}
+				return (event);
+			}
+		});
+		return(event);
+	}
+	
+	
+	
+	
+	
+	
+}

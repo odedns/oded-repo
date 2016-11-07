@@ -1,0 +1,43 @@
+package il.co.fmr.coord.app;
+
+import org.apache.log4j.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+
+ 
+@Configuration 
+@EnableAutoConfiguration 
+@ComponentScan(basePackages = { "il.co.fmr.coord.service","il.co.fmr.coord.rest" })
+public class CoordApplication {
+	private static final Logger log = Logger.getLogger(CoordApplication.class);
+	
+	public static void main(String[] args) {
+        SpringApplication.run(CoordApplication.class, args);
+        log.info("server started...");
+    }
+}
+
+@EnableWebSecurity
+@Configuration
+class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+ 
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http.authorizeRequests().anyRequest().fullyAuthenticated().and().
+    httpBasic().and().
+    csrf().disable();
+  }
+  
+  
+}
+
+
+
+
+

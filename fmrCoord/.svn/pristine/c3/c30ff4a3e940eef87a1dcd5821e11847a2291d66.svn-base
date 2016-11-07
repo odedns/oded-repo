@@ -1,0 +1,50 @@
+package il.fmr.coord.test;
+
+import static org.junit.Assert.*;
+
+import java.util.HashMap;
+
+import il.co.fmr.coord.app.Application;
+import il.co.fmr.coord.data.EventService;
+import il.co.fmr.coord.rest.FaasEvent;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(Application.class)
+public class EventServiceTest {
+	@Autowired
+	EventService service;
+	
+
+	@Test
+	public void testCreateEvent() {
+
+		FaasEvent event  = new FaasEvent();
+		event.setEventId(1);
+		event.setEventType("LOGIN");
+		
+		HashMap<String,String > map = new HashMap<String,String>();
+		map.put("p1", "v1");
+		map.put("p2", "v2");
+		event.setParams(map);
+		service.createEvent(event);
+		
+		
+		
+	}
+	
+	@Test
+	public void testFindById() {
+		
+		FaasEvent event = service.findById(2);
+		System.out.println(ToStringBuilder.reflectionToString(event));
+		
+	}
+
+}

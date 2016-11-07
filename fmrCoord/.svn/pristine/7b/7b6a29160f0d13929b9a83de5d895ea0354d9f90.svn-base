@@ -1,0 +1,37 @@
+package il.co.fmr.rest;
+
+
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+@RequestMapping(value="/rest")
+public class EventController {
+	
+	private static final Logger log = Logger.getLogger(EventController.class);
+	
+	
+	@RequestMapping(value= "/event", method = RequestMethod.POST, consumes="application/json")
+	public void postEvent(@RequestBody FmrEvent event)
+	{
+		log.info("in /rest/event: ");
+		log.info("got event = "+ ToStringBuilder.reflectionToString(event));
+		
+	}
+	
+		
+	@RequestMapping(value= "/route", method = RequestMethod.GET)
+	public String route()
+	{
+		log.info("in /rest/route ");
+		return("in /rest/rout");
+	}
+	
+}

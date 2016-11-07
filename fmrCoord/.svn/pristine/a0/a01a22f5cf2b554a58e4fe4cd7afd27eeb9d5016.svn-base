@@ -1,0 +1,69 @@
+/**
+ * 
+ */
+package il.co.fmr.coord.rest;
+
+import java.io.Serializable;
+import java.util.Map;
+
+/**
+ * @author oded
+ *
+ */
+public class FaasEvent implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int eventId;
+	private String eventType;
+	private Map<String,String> params;
+	
+	
+	/**
+	 * empty constructor
+	 */
+	public FaasEvent()
+	{
+		
+	}
+
+
+
+	public int getEventId() {
+		return eventId;
+	}
+
+
+
+	public void setEventId(int eventId) {
+		this.eventId = eventId;
+	}
+
+
+
+	public String getEventType() {
+		return eventType;
+	}
+
+
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
+	}
+
+
+
+	public Map<String, String> getParams() {
+		return params;
+	}
+
+
+
+	public void setParams(Map<String, String> params) {
+		this.params = params;
+	}
+	
+
+}

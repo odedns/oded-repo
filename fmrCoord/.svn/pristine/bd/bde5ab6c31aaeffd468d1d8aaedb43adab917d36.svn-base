@@ -1,0 +1,51 @@
+
+package il.co.fmr.coord.service;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+/**
+ * @author oded
+ *
+ */
+
+public class JsonConverter {
+
+	
+	private JsonConverter()
+	{
+		
+	}
+	
+	public static String fromMap(Map<String,String> map) throws JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		String json = mapper.writeValueAsString(map);
+		return(json);
+	}
+
+	
+	
+	public static Map<String,String> toMap(String json) throws JsonParseException, JsonMappingException, IOException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		HashMap<String,String> map = mapper.readValue(json, HashMap.class);
+		
+		return(map);
+		
+		
+	}
+}	
+	
+	
+	
+	
+	
+
+

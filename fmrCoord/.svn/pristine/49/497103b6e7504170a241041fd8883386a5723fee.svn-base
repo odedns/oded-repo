@@ -1,0 +1,14 @@
+#spring.data.rest.base-path=/api
+security.basic.enabled=true
+#management.security.enabled=false
+#logging.level.=DEBUG
+logging.level.org.springframework.security= DEBUG
+logging.level.il.co.fmr.coord= DEBUG
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/faasdb
+spring.datasource.username=faas
+spring.datasource.password=faas
+spring.datasource.driver-class-name=org.postgresql.Driver
+server.port = 8090
+security.user.password=faas
+security.user.name=faas

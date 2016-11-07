@@ -1,0 +1,13 @@
+
+CREATE USER faas WITH PASSWORD 'faas';
+
+CREATE DATABASE faasdb;
+GRANT ALL PRIVILEGES ON DATABASE faasdb to faas;
+
+  DROP TABLE faas_events;
+  CREATE TABLE faas_events ( id serial not null primary key,
+    event_id integer,
+    event_type smallint,
+    data json
+  );
+CREATE INDEX faas_events_idindx ON faas_events (id);
