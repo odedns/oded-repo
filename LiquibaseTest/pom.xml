@@ -35,7 +35,6 @@
   
   
      <build>
-     <pluginManagement>
       <plugins>
 		<plugin>
 		   <groupId>org.liquibase</groupId>
@@ -75,6 +74,5 @@
       </plugin>
 		
       </plugins>
-      </pluginManagement>
     </build>
 </project>
