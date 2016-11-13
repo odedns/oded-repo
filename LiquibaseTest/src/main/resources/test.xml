@@ -1,290 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet author="family (generated)" id="1466930922691-1">
-        <createTable tableName="customers">
-            <column name="customerNumber" type="INT(10)">
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+
+<changeSet author="oded" id="111">
+
+<preConditions onFail="MARK_RAN">
+	<not>
+	<tableExists tableName="new_table"/>
+	</not>
+
+</preConditions>
+<createTable tableName="new_table">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="t_pkey"/>
+            </column>
+            <column name="first_name" type="VARCHAR(45)">
                 <constraints nullable="false"/>
             </column>
-            <column name="customerName" type="VARCHAR(50)">
+            <column name="last_name" type="VARCHAR(45)">
                 <constraints nullable="false"/>
             </column>
-            <column name="contactLastName" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="contactFirstName" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="phone" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="addressLine1" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="addressLine2" type="VARCHAR(50)"/>
-            <column name="city" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="state" type="VARCHAR(50)"/>
-            <column name="postalCode" type="VARCHAR(15)"/>
-            <column name="country" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="salesRepEmployeeNumber" type="INT(10)"/>
-            <column name="creditLimit" type="DOUBLE(22)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-2">
-        <createTable tableName="departments">
-            <column name="dept_no" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="dept_name" type="VARCHAR(45)"/>
-            <column name="createdate" type="datetime(6)"/>
-            <column name="lastModified" type="datetime(6)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-3">
-        <createTable tableName="employees">
-            <column name="employeeNumber" type="INT(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="lastName" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="firstName" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="extension" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="email" type="VARCHAR(100)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="officeCode" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="reportsTo" type="INT(10)"/>
-            <column name="jobTitle" type="VARCHAR(50)">
+            <column defaultValueComputed="now()" name="last_update" type="TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
         </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-4">
-        <createTable tableName="offices">
-            <column name="officeCode" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="city" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="phone" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="addressLine1" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="addressLine2" type="VARCHAR(50)"/>
-            <column name="state" type="VARCHAR(50)"/>
-            <column name="country" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="postalCode" type="VARCHAR(15)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="territory" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-5">
-        <createTable tableName="orderdetails">
-            <column name="orderNumber" type="INT(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="productCode" type="VARCHAR(15)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="quantityOrdered" type="INT(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="priceEach" type="DOUBLE(22)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="orderLineNumber" type="SMALLINT(5)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-6">
-        <createTable tableName="orders">
-            <column name="orderNumber" type="INT(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="orderDate" type="date">
-                <constraints nullable="false"/>
-            </column>
-            <column name="requiredDate" type="date">
-                <constraints nullable="false"/>
-            </column>
-            <column name="shippedDate" type="date"/>
-            <column name="status" type="VARCHAR(15)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="comments" type="TEXT"/>
-            <column name="customerNumber" type="INT(10)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-7">
-        <createTable tableName="payments">
-            <column name="customerNumber" type="INT(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="checkNumber" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="paymentDate" type="date">
-                <constraints nullable="false"/>
-            </column>
-            <column name="amount" type="DOUBLE(22)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-8">
-        <createTable tableName="productlines">
-            <column name="productLine" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="textDescription" type="VARCHAR(4000)"/>
-            <column name="htmlDescription" type="MEDIUMTEXT"/>
-            <column name="image" type="MEDIUMBLOB"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-9">
-        <createTable tableName="products">
-            <column name="productCode" type="VARCHAR(15)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="productName" type="VARCHAR(70)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="productLine" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="productScale" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="productVendor" type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="productDescription" type="TEXT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="quantityInStock" type="SMALLINT(5)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="buyPrice" type="DOUBLE(22)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="MSRP" type="DOUBLE(22)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-10">
-        <createTable tableName="t1">
-            <column autoIncrement="true" name="id" type="INT(10) UNSIGNED">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="bid" type="INT(10) UNSIGNED">
-                <constraints nullable="false"/>
-            </column>
-            <column name="weight" type="INT(10) UNSIGNED">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-11">
-        <addPrimaryKey columnNames="customerNumber" constraintName="PRIMARY" tableName="customers"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-12">
-        <addPrimaryKey columnNames="dept_no" constraintName="PRIMARY" tableName="departments"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-13">
-        <addPrimaryKey columnNames="employeeNumber" constraintName="PRIMARY" tableName="employees"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-14">
-        <addPrimaryKey columnNames="officeCode" constraintName="PRIMARY" tableName="offices"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-15">
-        <addPrimaryKey columnNames="orderNumber, productCode" constraintName="PRIMARY" tableName="orderdetails"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-16">
-        <addPrimaryKey columnNames="orderNumber" constraintName="PRIMARY" tableName="orders"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-17">
-        <addPrimaryKey columnNames="customerNumber, checkNumber" constraintName="PRIMARY" tableName="payments"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-18">
-        <addPrimaryKey columnNames="productLine" constraintName="PRIMARY" tableName="productlines"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-19">
-        <addPrimaryKey columnNames="productCode" constraintName="PRIMARY" tableName="products"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-20">
-        <createIndex indexName="customerNumber" tableName="orders">
-            <column name="customerNumber"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-21">
-        <createIndex indexName="officeCode" tableName="employees">
-            <column name="officeCode"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-22">
-        <createIndex indexName="productCode" tableName="orderdetails">
-            <column name="productCode"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-23">
-        <createIndex indexName="productLine" tableName="products">
-            <column name="productLine"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-24">
-        <createIndex indexName="reportsTo" tableName="employees">
-            <column name="reportsTo"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-25">
-        <createIndex indexName="salesRepEmployeeNumber" tableName="customers">
-            <column name="salesRepEmployeeNumber"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-26">
-        <addForeignKeyConstraint baseColumnNames="salesRepEmployeeNumber" baseTableName="customers" constraintName="customers_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="employeeNumber" referencedTableName="employees"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-27">
-        <addForeignKeyConstraint baseColumnNames="reportsTo" baseTableName="employees" constraintName="employees_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="employeeNumber" referencedTableName="employees"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-28">
-        <addForeignKeyConstraint baseColumnNames="officeCode" baseTableName="employees" constraintName="employees_ibfk_2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="officeCode" referencedTableName="offices"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-29">
-        <addForeignKeyConstraint baseColumnNames="orderNumber" baseTableName="orderdetails" constraintName="orderdetails_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="orderNumber" referencedTableName="orders"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-30">
-        <addForeignKeyConstraint baseColumnNames="productCode" baseTableName="orderdetails" constraintName="orderdetails_ibfk_2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="productCode" referencedTableName="products"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-31">
-        <addForeignKeyConstraint baseColumnNames="customerNumber" baseTableName="orders" constraintName="orders_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="customerNumber" referencedTableName="customers"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-32">
-        <addForeignKeyConstraint baseColumnNames="customerNumber" baseTableName="payments" constraintName="payments_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="customerNumber" referencedTableName="customers"/>
-    </changeSet>
-    <changeSet author="family (generated)" id="1466930922691-33">
-        <addForeignKeyConstraint baseColumnNames="productLine" baseTableName="products" constraintName="products_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="productLine" referencedTableName="productlines"/>
-    </changeSet>
-</databaseChangeLog>
+		<rollback>
+			drop table new_table
+		</rollback>
+</changeSet>
+
+<changeSet id="112" author="oded">
+
+<preConditions onFail="MARK_RAN">
+	
+	<not><columnExists tableName="new_table" columnName="comment"/>
+		</not>
+	</preConditions>
+	<addColumn tableName="new_table">
+	    <column name="comment" type="VARCHAR(45)" />
+		</addColumn>
+	<rollback>
+		alter table new_table drop column comment
+	</rollback>
+</changeSet>
+
+<changeSet id="113" author="oded">
+	<preConditions onFail="MARK_RAN">
+	
+		<not><columnExists tableName="new_table" columnName="txt1"/>
+		</not>
+	</preConditions>
+	<sql>
+	alter table new_table add column txt1 VARCHAR(45);	
+	
+	</sql>
+	<rollback>
+			alter table new_table drop column txt1
+	</rollback>
+
+</changeSet>
+
+  </databaseChangeLog>
