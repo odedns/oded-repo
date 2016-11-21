@@ -59,5 +59,20 @@
 	</rollback>
 
 </changeSet>
+<changeSet id="114" author="oded">
+	<preConditions onFail="MARK_RAN">
+	
+		<not><columnExists tableName="new_table" columnName="txt2"/>
+		</not>
+	</preConditions>
+	<sql>
+	alter table new_table add column txt2 VARCHAR(45);	
+	
+	</sql>
+	<rollback>
+			alter table new_table drop column txt2
+	</rollback>
+
+</changeSet>
 
   </databaseChangeLog>
