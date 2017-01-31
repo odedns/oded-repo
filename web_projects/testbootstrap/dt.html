@@ -1,0 +1,48 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+</head>
+<body>
+
+  <script lang="javascript">
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        "ajax": "data.json",
+        "columns": [
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "extn" },
+            { "data": "start_date" },
+            { "data": "salary" }
+        ]
+    } );
+} );
+</script>
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+  </body>
+  </html>
