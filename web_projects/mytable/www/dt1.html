@@ -16,7 +16,15 @@
 <script type="text/javascript" src="http://gyrocode.github.io/jquery-datatables-checkboxes/1.0.3/js/dataTables.checkboxes.min.js"></script>
 	<script type="text/javascript" src="/dataTables.material.min.js"></script>
 <!--
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"/>
+
+<script type="text/javascript" src="http://cdn.datatables.net/plug-ins/1.10.13/sorting/datetime-moment.js"/>
 -->
+<!--
+-->
+
+<script type="text/javascript" src="/date-euro.js" />
+
 </head>
 
 <body>
@@ -32,8 +40,10 @@ var res = {
 
 $(document).ready(function() {
   var d = "some value";
+  //$.fn.dataTable.moment( 'HH:mm MMM D, YY' );
+  // $.fn.dataTable.moment( 'dddd, MMMM Do, YYYY' );
   var table = $('#example').DataTable({
-      'ajax': 'data.json',
+      'ajax': 'data0.json',
       "bFilter": false,
     //    "bInfo": false,
       'columnDefs': [
@@ -42,6 +52,10 @@ $(document).ready(function() {
             'checkboxes': {
                'selectRow': true
             }
+         },
+         {
+           targets: 5,
+           type: 'date-euro'
          },
          {
            targets: 4,
